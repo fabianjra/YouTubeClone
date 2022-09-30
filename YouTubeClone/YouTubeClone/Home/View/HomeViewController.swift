@@ -16,7 +16,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        //Se utiliza await porque el metodo que se llama es Async.
+        //Se utiliza Task porque el ViewDidLoad no puede ser Async.
+        Task{
+            await presenter.getHomeObjects()
+        }
     }
     
     

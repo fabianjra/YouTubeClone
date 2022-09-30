@@ -6,19 +6,76 @@
 import Foundation
 
 // MARK: - VideoModel
-struct VideoModel: Codable {
+struct VideoModel: Decodable {
     let kind, etag: String
     let items: [Item]
     let pageInfo: PageInfo
     
     // MARK: - Item
-    struct Item: Codable {
-        let kind, etag, id: String
-        let snippet: Snippet
-        let contentDetails: ContentDetails
-        let status: Status
-        let statistics: Statistics
-        let topicDetails: TopicDetails
+    struct Item: Decodable {
+        let kind: String
+        let id: String?
+        let snippet: Snippet?
+        let contentDetails: ContentDetails?
+        let statistics: Statistics?
+        
+        enum CodingKeys: String, CodingKey {
+            case kind
+            case id
+            case snippet
+            case contentDetails
+            case statistics
+        }
+        
+        //Si se le hacer codingKeys a un campo porque da problemas, hay que hacerselos a todos.
+        init(from decoder: Decoder) throws {
+            
+            //Este container, maneja la informacion de un "item" completo que se obtenga, o sea toda la entidad.
+            //Se realiza lo siguiente: Se toma el valor decoder, se le busca la propiedad container y se busca dentro de CodingKeys.
+            //Por conversion de utiliza "CodignKeys", pero el nombre puede ser cualquiera.
+            //container va a validar que el "id" sea de tipo objeto o de string.
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            
+            self.kind = try container.decode(String.self, forKey: .kind) //Directo porque es string, no ocupa validacion.
+            
+            //Valida que seea de tipo VideoId (debe ser type). forKey se usa con el campo "id" del enum CodingKeys.
+            //Resumen: Valida que dentro de container, el campo "id" sea del tipo "VideoId". sino, es un String.
+            if let id = try? container.decode(VideoId.self, forKey: .id){
+                //En caso de que sea de tipo "VideoId":
+                self.id = id.videoId
+                
+            }else{
+                //En caso de que no sea String. deja la variable como nil.
+                if let id = try? container.decode(String.self, forKey: .id){
+                    self.id = id
+                }else{
+                    self.id = nil
+                }
+            }
+            
+            if let snippet = try? container.decode(Snippet.self, forKey: .snippet){
+                self.snippet = snippet
+            }else{
+                self.snippet = nil
+            }
+            
+            if let contentDetails = try? container.decode(ContentDetails.self, forKey: .contentDetails){
+                self.contentDetails = contentDetails
+            }else{
+                self.contentDetails = nil
+            }
+            
+            if let statistics = try? container.decode(Statistics.self, forKey: .statistics){
+                self.statistics = statistics
+            }else{
+                self.statistics = nil
+            }
+        }
+        
+        struct VideoId: Decodable{
+            let kind: String
+            let videoId: String
+        }
         
         // MARK: - ContentDetails
         struct ContentDetails: Codable {
@@ -29,32 +86,31 @@ struct VideoModel: Codable {
         
         // MARK: - Snippet
         struct Snippet: Codable {
-            let publishedAt: Date
-            let channelID, title, snippetDescription: String
+            let publishedAt: String
+            let channelId: String
+            let title: String
+            let description: String
             let thumbnails: Thumbnails
             let channelTitle: String
-            let tags: [String]
-            let categoryID, liveBroadcastContent: String
-            let localized: Localized
-            let defaultAudioLanguage: String
+            let tags: [String]?
             
             enum CodingKeys: String, CodingKey {
                 case publishedAt
-                case channelID = "channelId"
+                case channelId
                 case title
-                case snippetDescription = "description"
-                case thumbnails, channelTitle, tags
-                case categoryID = "categoryId"
-                case liveBroadcastContent, localized, defaultAudioLanguage
+                case description
+                case thumbnails
+                case channelTitle
+                case tags
             }
             
             // MARK: - Thumbnails
             struct Thumbnails: Codable {
-                let thumbnailsDefault, medium, high: Default
+                let medium, high: Default
                 
                 enum CodingKeys: String, CodingKey {
-                    case thumbnailsDefault = "default"
-                    case medium, high
+                    case medium
+                    case high
                 }
                 
                 // MARK: - Default
@@ -64,32 +120,13 @@ struct VideoModel: Codable {
                 }
             }
             
-            // MARK: - Localized
-            struct Localized: Codable {
-                let title, localizedDescription: String
-                
-                enum CodingKeys: String, CodingKey {
-                    case title
-                    case localizedDescription = "description"
-                }
-            }
         }//Snippet
-        
-        // MARK: - Status
-        struct Status: Codable {
-            let uploadStatus, privacyStatus, license: String
-            let embeddable, publicStatsViewable, madeForKids: Bool
-        }
         
         // MARK: - Statistics
         struct Statistics: Codable {
             let viewCount, likeCount, favoriteCount, commentCount: String
         }
         
-        // MARK: - TopicDetails
-        struct TopicDetails: Codable {
-            let topicCategories: [String]
-        }
     }//Item
     
     // MARK: - PageInfo

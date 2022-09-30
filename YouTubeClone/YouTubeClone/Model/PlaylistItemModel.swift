@@ -24,7 +24,7 @@ struct PlaylistItemModel: Codable {
         
         // MARK: - Snippet
         struct Snippet: Codable {
-            let publishedAt: Date
+            let publishedAt: String
             let channelID, title, snippetDescription: String
             let thumbnails: Thumbnails
             let channelTitle, playlistID: String
@@ -76,7 +76,7 @@ struct PlaylistItemModel: Codable {
         // MARK: - ContentDetails
         struct ContentDetails: Codable {
             let videoID: String
-            let videoPublishedAt: Date
+            let videoPublishedAt: String
 
             enum CodingKeys: String, CodingKey {
                 case videoID = "videoId"

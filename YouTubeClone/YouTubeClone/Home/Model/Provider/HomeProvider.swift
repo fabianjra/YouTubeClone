@@ -10,7 +10,7 @@ import Foundation
 protocol HomeProviderProtocol {
     func getVideos(searchString: String, channelId: String) async throws -> VideoModel
     func getChannel(channelId:String) async throws -> ChannelModel
-    func getPlaylist(channelId:String) async throws -> PlaylistModel
+    func getPlaylists(channelId:String) async throws -> PlaylistModel
     func getPlaylistItems(playlistId:String) async throws -> PlaylistItemModel
     //func getVideosMock(searchString: String, channelId: String) async throws -> VideoModel
 }
@@ -18,7 +18,7 @@ protocol HomeProviderProtocol {
 class HomeProvider: HomeProviderProtocol{
     
     func getVideos(searchString: String, channelId: String) async throws -> VideoModel{
-        var queryParams: [String:String] = ["part":"snippet"]
+        var queryParams: [String:String] = ["part":"snippet", "type": "video"]
         
         if !channelId.isEmpty{
             queryParams["channelId"] = channelId
@@ -35,7 +35,7 @@ class HomeProvider: HomeProviderProtocol{
             
             return model
         } catch {
-            print(error) //TODO: Util.
+            CatchException(err: error)
             throw error
         }
     }//FIN: Metodo
@@ -50,12 +50,12 @@ class HomeProvider: HomeProviderProtocol{
             
             return model
         } catch {
-            print(error) //TODO: Util.
+            CatchException(err: error)
             throw error
         }
     }//FIN: Metodo
     
-    func getPlaylist(channelId:String) async throws -> PlaylistModel{
+    func getPlaylists(channelId:String) async throws -> PlaylistModel{
         let queryParams: [String:String] = ["part":"snippet,contentDetails", "channelId":channelId]
         
         let requestModel = RequestModel(endPoint: .playlists, queryItems: queryParams)
@@ -65,7 +65,7 @@ class HomeProvider: HomeProviderProtocol{
             
             return model
         } catch {
-            print(error) //TODO: Util.
+            CatchException(err: error)
             throw error
         }
     }//FIN: Metodo
@@ -80,7 +80,7 @@ class HomeProvider: HomeProviderProtocol{
             
             return model
         } catch {
-            print(error) //TODO: Util.
+            CatchException(err: error)
             throw error
         }
     }//FIN: Metodo

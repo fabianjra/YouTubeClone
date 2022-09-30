@@ -44,10 +44,11 @@ class ServiceLayer{
             let decoder = JSONDecoder()
             
             do{
+                //el valor "data" contiene los datos consutlados. Aqui trata de transformarlo con el decoder, al tipo de objeto que se esta esperando.
                 let decodeData = try decoder.decode(T.self, from: data)
                 return decodeData
             }catch{
-                print(error)
+                CatchException(err: error)
                 throw NetworkError.couldNotDecodeData
             }
             

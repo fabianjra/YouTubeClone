@@ -8,7 +8,9 @@
 import Foundation
 
 struct PlaylistModel: Decodable {
-    let kind, etag, nextPageToken: String
+    let kind: String
+    let etag: String
+    let nextPageToken: String?
     let pageInfo: PageInfo
     let items: [Items]
     
@@ -18,10 +20,10 @@ struct PlaylistModel: Decodable {
     
     struct Items: Decodable {
         let kind, etag, id: String
-        let snipet: Snipet
+        let snippet: Snippet
         let contentDetails: ContentDetails
         
-        struct Snipet: Decodable {
+        struct Snippet: Decodable {
             let publishedAt, channelId, title, description: String
             let thumbnails: Thumbnails
             
@@ -39,7 +41,8 @@ struct PlaylistModel: Decodable {
             let localized: Localized
             
             struct Localized: Decodable {
-                let tile, description: String
+                let title: String
+                let description: String
             }
         }//Snippet
         

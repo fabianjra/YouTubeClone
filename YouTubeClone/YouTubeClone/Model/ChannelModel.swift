@@ -25,11 +25,14 @@ struct ChannelModel: Codable {
         
         // MARK: - Snippet
         struct Snippet: Codable {
-            let title, snippetDescription, customURL, publishedAt: String
+            let title: String
+            let snippetDescription: String
+            let customURL: String?
+            let publishedAt: String
             let thumbnails: Thumbnails
-            let defaultLanguage: String
+            let defaultLanguage: String?
             let localized: Localized
-            let country: String
+            let country: String?
 
             enum CodingKeys: String, CodingKey {
                 case title
@@ -80,12 +83,15 @@ struct ChannelModel: Codable {
             
             // MARK: - Channel
             struct Channel: Codable {
-                let title, channelDescription, keywords, defaultLanguage: String
-                let country: String
+                let title: String
+                let description: String
+                let keywords: String?
+                let defaultLanguage: String?
+                let country: String?
 
                 enum CodingKeys: String, CodingKey {
                     case title
-                    case channelDescription = "description"
+                    case description
                     case keywords, defaultLanguage, country
                 }
             }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40974C9728E4F22B00889636 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40974C9628E4F22B00889636 /* Utils.swift */; };
 		E9DCCB0E2849B6F500F462ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCCB0D2849B6F500F462ED /* AppDelegate.swift */; };
 		E9DCCB102849B6F500F462ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCCB0F2849B6F500F462ED /* SceneDelegate.swift */; };
 		E9DCCB122849B6F500F462ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCCB112849B6F500F462ED /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40974C9628E4F22B00889636 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E9DCCB0A2849B6F500F462ED /* YouTubeClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubeClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DCCB0D2849B6F500F462ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9DCCB0F2849B6F500F462ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				E9DCCB50285199D700F462ED /* Constants.swift */,
+				40974C9628E4F22B00889636 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				E9DCCB122849B6F500F462ED /* ViewController.swift in Sources */,
 				E9DCCB4E2851989800F462ED /* RequestModel.swift in Sources */,
 				E9DCCB232851725B00F462ED /* PlaylistModel.swift in Sources */,
+				40974C9728E4F22B00889636 /* Utils.swift in Sources */,
 				E9DCCB5D2854234300F462ED /* ChannelModel.swift in Sources */,
 				E9DCCB51285199D700F462ED /* Constants.swift in Sources */,
 				E9DCCB412851859A00F462ED /* ChannelsViewController.swift in Sources */,
