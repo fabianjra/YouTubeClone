@@ -24,26 +24,72 @@ class HomePresenter{
     }
     
     //Se llama HomeObjects porque se estan obteniendo todos los objetos del inicio.
+    
+    /*
+     A MainActor is a globally unique actor who performs his tasks on the main thread. It should be used for properties, methods, instances,
+     and closures to perform tasks on the main thread. Proposal SE-0316 Global Actors introduced the main actor as its an example of a global
+     actor, and it inherits the GlobalActor protocol.
+     */
+    @MainActor
     func getHomeObjects() async{
         
+        //Se elimina el objeto, antes de llamar al servicio para que todo quede vacio.
         objectList.removeAll()
+        
+        async let channel = try await provider.getChannel(channelId: Constants.channelID).items
+        async let playlists = try await provider.getPlaylists(channelId: Constants.channelID).items
+        async let videos = try await provider.getVideos(searchString: "", channelId: Constants.channelID).items
+        //async let playlistItems = try await provider.getPlaylistItems(playlistId: playlists.first?.id ?? "").items
         
         do {
             //La forma en la que trabaja el Async Await, es que primero hace el llamado al channel y solamente cuando realice la llamada y traiga datos, pasa al siguiente llamado. (llamada en cascada).
             //Lo correcto, es realizar esos llamados agrupados en uno solo.
+            //let channel = try await provider.getChannel(channelId: Constants.channelID).items
+            //let playlists = try await provider.getPlaylists(channelId: Constants.channelID).items
+            //let videos = try await provider.getVideos(searchString: "", channelId: Constants.channelID).items
+            //let playlistItems = try await provider.getPlaylistItems(playlistId: playlists.first?.id ?? "").items
             
-            let channel = try await provider.getChannel(channelId: Constants.channelID).items
-            let playlists = try await provider.getPlaylists(channelId: Constants.channelID).items
-            let videos = try await provider.getVideos(searchString: "", channelId: Constants.channelID).items
-            let playlistItems = try await provider.getPlaylistItems(playlistId: playlists.first?.id ?? "").items
+            //***************************************************//
+            //Forma correcta de hacer los llamados al servicio:
             
-            objectList.append(channel)
-            objectList.append(playlists)
-            objectList.append(videos)
-            objectList.append(playlistItems)
+            //Entre parantesis se le da un alias a cada una de las variables que se llaman con el Try.
+            //Resumen: Se declaran 3 variables y se hace un solo Await de los llamados, para asignarlas a cada una de las variables.
+            let (responseChannel, responsePlaylist, responseVideos) = await (try channel, try playlists, try videos)
+            
+            //Index: 0
+            objectList.append(responseChannel)
+            
+            //Obtiene el ID del primer item del playlist, para poder asignarlo por parametro al llamado del metodo.
+            if let playlistId = responsePlaylist.first?.id, let playlistItems = await getPlaylistItems(playlistId: playlistId) {
+                
+                //Se pide el ".items" porque en el metodo "getPlaylistItems" no se esta pidiendo el .items
+                //Index: 1
+                objectList.append(playlistItems.items)
+            }
+            
+            //Index: 2
+            objectList.append(responseVideos)
+            
+            //Index: 3
+            objectList.append(responsePlaylist)
+            
+            //Se le pasa el objeto al delegate:
+            delegate?.getData(list: objectList)
             
         } catch {
             CatchException(err: error)
+        }
+    }
+    
+    //Se crea un metodo para llamar al PlaylistItems, ya que depende de la respuesta de Playlist.
+    //Se pone la respuesta como opcional, porque puede ser que por algun motivo no exista el o los items de la respuesta.
+    func getPlaylistItems(playlistId: String) async -> PlaylistItemModel?{
+        do{
+            let playlistItems = try await provider.getPlaylistItems(playlistId: playlistId)
+            return playlistItems
+        }catch{
+         CatchException(err: error)
+            return nil
         }
     }
 }

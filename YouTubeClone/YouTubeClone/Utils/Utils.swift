@@ -8,5 +8,5 @@
 import Foundation
 
 func CatchException(err: Error) {
-    print(err)
+    print("Error en un catch: ", err)
 }
