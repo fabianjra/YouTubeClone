@@ -12,13 +12,13 @@ struct PlaylistModel: Decodable {
     let etag: String
     let nextPageToken: String?
     let pageInfo: PageInfo
-    let items: [Items]
+    let items: [Item]
     
     struct PageInfo: Decodable{
         let totalResults, resultsPerPage: Int
     }
     
-    struct Items: Decodable {
+    struct Item: Decodable {
         let kind, etag, id: String
         let snippet: Snippet
         let contentDetails: ContentDetails

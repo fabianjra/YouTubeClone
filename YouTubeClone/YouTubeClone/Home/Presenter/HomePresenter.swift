@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeViewProtocol: AnyObject {
-    func getData(list: [[Any]]) //Se hace un array, de un array de Anys, porque vienen diferentes tipos de datos.
+    func getData(list: [[Any]], sectionTitleList: [String]) //Se hace un array, de un array de Anys, porque vienen diferentes tipos de datos.
 }
 
 class HomePresenter{
@@ -16,6 +16,9 @@ class HomePresenter{
     var provider: HomeProviderProtocol
     weak var delegate: HomeViewProtocol?
     private var objectList: [[Any]] = []
+    
+    //Para saber cual es el titulo de cada uno de los Section, del TableView.
+    private var sectionTitleList: [String] = []
     
     //Al tener un provider ya asignado, no hace falta pasarle un valor cuando se instancia.
     init(provider: HomeProviderProtocol = HomeProvider(), delegate: HomeViewProtocol) {
@@ -45,6 +48,7 @@ class HomePresenter{
         
         //Se elimina el objeto, antes de llamar al servicio para que todo quede vacio.
         objectList.removeAll()
+        sectionTitleList.removeAll()
         
         async let channel = try await provider.getChannel(channelId: Constants.channelID).items
         async let playlists = try await provider.getPlaylists(channelId: Constants.channelID).items
@@ -68,6 +72,7 @@ class HomePresenter{
             
             //Index: 0
             objectList.append(responseChannel)
+            sectionTitleList.append("") //Llenar un valor para el titulo de esta section.
             
             //Obtiene el ID del primer item del playlist, para poder asignarlo por parametro al llamado del metodo.
             if let playlistId = responsePlaylist.first?.id, let playlistItems = await getPlaylistItems(playlistId: playlistId) {
@@ -75,16 +80,19 @@ class HomePresenter{
                 //Se pide el ".items" porque en el metodo "getPlaylistItems" no se esta pidiendo el .items
                 //Index: 1
                 objectList.append(playlistItems.items)
+                sectionTitleList.append(responsePlaylist.first?.snippet.title ?? "")
             }
             
             //Index: 2
             objectList.append(responseVideos)
+            sectionTitleList.append("Uploads")
             
             //Index: 3
             objectList.append(responsePlaylist)
+            sectionTitleList.append("Playlist creados")
             
             //Se le pasa el objeto al delegate:
-            delegate?.getData(list: objectList)
+            delegate?.getData(list: objectList, sectionTitleList: sectionTitleList)
             
         } catch {
             CatchException(err: error)
