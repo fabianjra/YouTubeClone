@@ -1,0 +1,182 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "tRVSPUmtrVdNXbVJ37sCZ8fKj4s",
+    "nextPageToken": "CAUQAA",
+    "regionCode": "CR",
+    "pageInfo": {
+        "totalResults": 262,
+        "resultsPerPage": 5
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "6z7scKCKOBO2jPVYS1jVTt2T8Gc",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "WPteZB8EE-Y"
+            },
+            "snippet": {
+                "publishedAt": "2021-03-24T02:19:48Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Esto pasa cuando dos mancos pelean a muerte",
+                "description": "Pelea de mancos. Fecha: 23 Marzo 2021.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/WPteZB8EE-Y/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/WPteZB8EE-Y/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/WPteZB8EE-Y/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-03-24T02:19:48Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "O5udNnjeUm66BQbbh7Kjh50wris",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "F22N0dbbGF8"
+            },
+            "snippet": {
+                "publishedAt": "2020-11-10T04:51:21Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Sweet dreams are made of this",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/F22N0dbbGF8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/F22N0dbbGF8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/F22N0dbbGF8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-11-10T04:51:21Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "OC1bIrWiURchxtKZi-iUJaK5jNE",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "8F6NPQmeWNE"
+            },
+            "snippet": {
+                "publishedAt": "2021-04-27T03:33:39Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - 1er win en nuevo mapa - Feat. CPIC",
+                "description": "Rebirth Verdansk '84 Tríos Mini Fabianjra: 5 Kills Joferava: 9 Kills Lumanasalas: 1 Kills.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/8F6NPQmeWNE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/8F6NPQmeWNE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/8F6NPQmeWNE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-04-27T03:33:39Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "3A7_I5m-UD0TSxG50EEjjOrKnzc",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "NROZRR_Il7U"
+            },
+            "snippet": {
+                "publishedAt": "2021-07-15T03:50:17Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - ¿Cómo estás Juan Carlos? Te voy a matar cuando vengas",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/NROZRR_Il7U/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/NROZRR_Il7U/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/NROZRR_Il7U/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-07-15T03:50:17Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "b9sYHxQoh-vj5-2k9U3wjJ8UR78",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "DCEKJ8r6Fr8"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-05T04:37:04Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Franqueando en el techo de químicos (Sale mal)",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-05T04:37:04Z"
+            }
+        }
+    ]
+}

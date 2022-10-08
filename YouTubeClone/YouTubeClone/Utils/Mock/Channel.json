@@ -1,0 +1,57 @@
+{
+    "kind": "youtube#channelListResponse",
+    "etag": "IdWDpI0wcJjcJHFXylgiCBJW0PY",
+    "pageInfo": {
+        "totalResults": 1,
+        "resultsPerPage": 5
+    },
+    "items": [
+        {
+            "kind": "youtube#channel",
+            "etag": "3g9sKedCnXXpJsV9JY_YQBieqhY",
+            "id": "UCgk9n71LlLGmGfv5y62ni2A",
+            "snippet": {
+                "title": "FabianJRA Games",
+                "description": "Gameplays de Warzone, partidas ganadas y videos cortos.",
+                "publishedAt": "2020-11-04T18:51:17.301993Z",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://yt3.ggpht.com/ytc/AMLnZu8A8Fbh6algOCbUEtI7pDjp_gY0ZZ_RFMjrKI_0=s88-c-k-c0x00ffffff-no-rj",
+                        "width": 88,
+                        "height": 88
+                    },
+                    "medium": {
+                        "url": "https://yt3.ggpht.com/ytc/AMLnZu8A8Fbh6algOCbUEtI7pDjp_gY0ZZ_RFMjrKI_0=s240-c-k-c0x00ffffff-no-rj",
+                        "width": 240,
+                        "height": 240
+                    },
+                    "high": {
+                        "url": "https://yt3.ggpht.com/ytc/AMLnZu8A8Fbh6algOCbUEtI7pDjp_gY0ZZ_RFMjrKI_0=s800-c-k-c0x00ffffff-no-rj",
+                        "width": 800,
+                        "height": 800
+                    }
+                },
+                "localized": {
+                    "title": "FabianJRA Games",
+                    "description": "Gameplays de Warzone, partidas ganadas y videos cortos."
+                }
+            },
+            "statistics": {
+                "viewCount": "5843",
+                "subscriberCount": "18",
+                "hiddenSubscriberCount": false,
+                "videoCount": "262"
+            },
+            "brandingSettings": {
+                "channel": {
+                    "title": "FabianJRA Games",
+                    "description": "Gameplays de Warzone, partidas ganadas y videos cortos.",
+                    "unsubscribedTrailer": "6GqVenRzaGs"
+                },
+                "image": {
+                    "bannerExternalUrl": "https://yt3.ggpht.com/RXWYBVr-dLSt0fS80JYrnCMXtpxUCLRMSLBMsjbx3MhfmqzH2Y4bydB67b8_0iD9MRgwLJCA"
+                }
+            }
+        }
+    ]
+}

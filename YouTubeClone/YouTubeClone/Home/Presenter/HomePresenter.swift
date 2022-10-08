@@ -19,8 +19,18 @@ class HomePresenter{
     
     //Al tener un provider ya asignado, no hace falta pasarle un valor cuando se instancia.
     init(provider: HomeProviderProtocol = HomeProvider(), delegate: HomeViewProtocol) {
+        
         self.provider = provider
         self.delegate = delegate
+        
+        //Si se esta debuguenado o ejectua desde un simulador.
+        #if DEBUG || TARGET_OS_SIMULATOR
+        if MockManager.shared.runWithMock {
+            self.provider = HomeProviderMock()
+        }
+        #else
+        //Otra accion en caso de que no sea DEBUG o Simulator.
+        #endif
     }
     
     //Se llama HomeObjects porque se estan obteniendo todos los objetos del inicio.
@@ -88,7 +98,7 @@ class HomePresenter{
             let playlistItems = try await provider.getPlaylistItems(playlistId: playlistId)
             return playlistItems
         }catch{
-         CatchException(err: error)
+            CatchException(err: error)
             return nil
         }
     }

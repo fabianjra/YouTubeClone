@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402953CD28F0B3670053511B /* HomeProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402953CC28F0B3670053511B /* HomeProviderMock.swift */; };
+		402953D028F136480053511B /* Channel.json in Resources */ = {isa = PBXBuildFile; fileRef = 402953CF28F136480053511B /* Channel.json */; };
+		402953D228F136600053511B /* Playlists.json in Resources */ = {isa = PBXBuildFile; fileRef = 402953D128F136600053511B /* Playlists.json */; };
+		402953D428F1367B0053511B /* PlaylistItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 402953D328F1367B0053511B /* PlaylistItems.json */; };
+		402953D628F136950053511B /* SearchVideos.json in Resources */ = {isa = PBXBuildFile; fileRef = 402953D528F136950053511B /* SearchVideos.json */; };
+		402953D828F138980053511B /* VideoSingle.json in Resources */ = {isa = PBXBuildFile; fileRef = 402953D728F138980053511B /* VideoSingle.json */; };
+		402953DA28F13D630053511B /* MockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402953D928F13D630053511B /* MockManager.swift */; };
 		40974C9728E4F22B00889636 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40974C9628E4F22B00889636 /* Utils.swift */; };
 		E9DCCB0E2849B6F500F462ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCCB0D2849B6F500F462ED /* AppDelegate.swift */; };
 		E9DCCB102849B6F500F462ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCCB0F2849B6F500F462ED /* SceneDelegate.swift */; };
@@ -40,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		402953CC28F0B3670053511B /* HomeProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProviderMock.swift; sourceTree = "<group>"; };
+		402953CF28F136480053511B /* Channel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Channel.json; sourceTree = "<group>"; };
+		402953D128F136600053511B /* Playlists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Playlists.json; sourceTree = "<group>"; };
+		402953D328F1367B0053511B /* PlaylistItems.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PlaylistItems.json; sourceTree = "<group>"; };
+		402953D528F136950053511B /* SearchVideos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchVideos.json; sourceTree = "<group>"; };
+		402953D728F138980053511B /* VideoSingle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoSingle.json; sourceTree = "<group>"; };
+		402953D928F13D630053511B /* MockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockManager.swift; sourceTree = "<group>"; };
 		40974C9628E4F22B00889636 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E9DCCB0A2849B6F500F462ED /* YouTubeClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubeClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DCCB0D2849B6F500F462ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +99,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		402953CE28F0B3B10053511B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				402953CF28F136480053511B /* Channel.json */,
+				402953D128F136600053511B /* Playlists.json */,
+				402953D328F1367B0053511B /* PlaylistItems.json */,
+				402953D528F136950053511B /* SearchVideos.json */,
+				402953D728F138980053511B /* VideoSingle.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		E9DCCB012849B6F500F462ED = {
 			isa = PBXGroup;
 			children = (
@@ -204,8 +230,10 @@
 		E9DCCB4F285199CB00F462ED /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				402953CE28F0B3B10053511B /* Mock */,
 				E9DCCB50285199D700F462ED /* Constants.swift */,
 				40974C9628E4F22B00889636 /* Utils.swift */,
+				402953D928F13D630053511B /* MockManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -239,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				E9DCCB562851B02400F462ED /* HomeProvider.swift */,
+				402953CC28F0B3670053511B /* HomeProviderMock.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -302,13 +331,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9DCCB3E2851858E00F462ED /* PlaylistsViewController.xib in Resources */,
+				402953D628F136950053511B /* SearchVideos.json in Resources */,
+				402953D028F136480053511B /* Channel.json in Resources */,
 				E9DCCB1A2849B6F700F462ED /* LaunchScreen.storyboard in Resources */,
+				402953D428F1367B0053511B /* PlaylistItems.json in Resources */,
 				E9DCCB46285185AA00F462ED /* AboutViewController.xib in Resources */,
+				402953D828F138980053511B /* VideoSingle.json in Resources */,
 				E9DCCB172849B6F700F462ED /* Assets.xcassets in Resources */,
 				E9DCCB3A2851858100F462ED /* VideosViewController.xib in Resources */,
 				E9DCCB152849B6F500F462ED /* Main.storyboard in Resources */,
 				E9DCCB362851856400F462ED /* HomeViewController.xib in Resources */,
 				E9DCCB422851859A00F462ED /* ChannelsViewController.xib in Resources */,
+				402953D228F136600053511B /* Playlists.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +362,7 @@
 				E9DCCB232851725B00F462ED /* PlaylistModel.swift in Sources */,
 				40974C9728E4F22B00889636 /* Utils.swift in Sources */,
 				E9DCCB5D2854234300F462ED /* ChannelModel.swift in Sources */,
+				402953DA28F13D630053511B /* MockManager.swift in Sources */,
 				E9DCCB51285199D700F462ED /* Constants.swift in Sources */,
 				E9DCCB412851859A00F462ED /* ChannelsViewController.swift in Sources */,
 				E9DCCB45285185AA00F462ED /* AboutViewController.swift in Sources */,
@@ -340,6 +375,7 @@
 				E9DCCB5B2854189300F462ED /* SearchModel.swift in Sources */,
 				E9DCCB2728517D0900F462ED /* VideoModel.swift in Sources */,
 				E9DCCB102849B6F500F462ED /* SceneDelegate.swift in Sources */,
+				402953CD28F0B3670053511B /* HomeProviderMock.swift in Sources */,
 				E9DCCB5F285429CA00F462ED /* PlaylistItemModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

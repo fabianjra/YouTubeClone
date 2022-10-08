@@ -12,7 +12,6 @@ protocol HomeProviderProtocol {
     func getChannel(channelId:String) async throws -> ChannelModel
     func getPlaylists(channelId:String) async throws -> PlaylistModel
     func getPlaylistItems(playlistId:String) async throws -> PlaylistItemModel
-    //func getVideosMock(searchString: String, channelId: String) async throws -> VideoModel
 }
 
 class HomeProvider: HomeProviderProtocol{

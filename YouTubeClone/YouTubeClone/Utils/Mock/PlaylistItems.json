@@ -1,0 +1,153 @@
+{
+    "kind": "youtube#playlistItemListResponse",
+    "etag": "8CfdJZI9TsGT-7nky-mbKLZO3k8",
+    "items": [
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "3xnP8c9VA0AHVgIeWb2wkJiD38g",
+            "id": "UExtOEJMVmFDRkg4QV84VFUxdzZQSE0yMnZaYUJuMVNQbS41NkI0NEY2RDEwNTU3Q0M2",
+            "snippet": {
+                "publishedAt": "2022-06-11T03:02:35Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "Call of Duty®: Modern Warfare®_20220228204132",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/XPLaAT3zOAU/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/XPLaAT3zOAU/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/XPLaAT3zOAU/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "playlistId": "PLm8BLVaCFH8A_8TU1w6PHM22vZaBn1SPm",
+                "position": 0,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "XPLaAT3zOAU"
+                },
+                "videoOwnerChannelTitle": "FabianJRA Games",
+                "videoOwnerChannelId": "UCgk9n71LlLGmGfv5y62ni2A"
+            },
+            "contentDetails": {
+                "videoId": "XPLaAT3zOAU",
+                "videoPublishedAt": "2022-03-01T04:27:31Z"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "D4vjn5-vgxmD1ZFQacD3q1eqdao",
+            "id": "UExtOEJMVmFDRkg4QV84VFUxdzZQSE0yMnZaYUJuMVNQbS4yODlGNEE0NkRGMEEzMEQy",
+            "snippet": {
+                "publishedAt": "2022-06-11T03:02:54Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Franqueando en el techo de químicos (Sale mal)",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "playlistId": "PLm8BLVaCFH8A_8TU1w6PHM22vZaBn1SPm",
+                "position": 1,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "DCEKJ8r6Fr8"
+                },
+                "videoOwnerChannelTitle": "FabianJRA Games",
+                "videoOwnerChannelId": "UCgk9n71LlLGmGfv5y62ni2A"
+            },
+            "contentDetails": {
+                "videoId": "DCEKJ8r6Fr8",
+                "videoPublishedAt": "2022-02-05T04:37:04Z"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "c_jLIIqx_KGiYICuzfycT_KbG5o",
+            "id": "UExtOEJMVmFDRkg4QV84VFUxdzZQSE0yMnZaYUJuMVNQbS4wMTcyMDhGQUE4NTIzM0Y5",
+            "snippet": {
+                "publishedAt": "2022-06-11T03:03:01Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "Mamá escucho borroso metame en arroz",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/CtcHR7F9eSs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/CtcHR7F9eSs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/CtcHR7F9eSs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/CtcHR7F9eSs/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/CtcHR7F9eSs/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "playlistId": "PLm8BLVaCFH8A_8TU1w6PHM22vZaBn1SPm",
+                "position": 2,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "CtcHR7F9eSs"
+                },
+                "videoOwnerChannelTitle": "FabianJRA Games",
+                "videoOwnerChannelId": "UCgk9n71LlLGmGfv5y62ni2A"
+            },
+            "contentDetails": {
+                "videoId": "CtcHR7F9eSs",
+                "videoPublishedAt": "2022-02-01T04:27:11Z"
+            }
+        }
+    ],
+    "pageInfo": {
+        "totalResults": 3,
+        "resultsPerPage": 5
+    }
+}

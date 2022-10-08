@@ -1,0 +1,138 @@
+{
+    "kind": "youtube#playlistListResponse",
+    "etag": "I9yesh5LY-LqRK4OYEgA92_5tSU",
+    "pageInfo": {
+        "totalResults": 3,
+        "resultsPerPage": 5
+    },
+    "items": [
+        {
+            "kind": "youtube#playlist",
+            "etag": "ZAd9Ar6qXTuN72O4A9lC5sd8sjs",
+            "id": "PLm8BLVaCFH8A_8TU1w6PHM22vZaBn1SPm",
+            "snippet": {
+                "publishedAt": "2022-06-11T03:01:39Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "Funny moments",
+                "description": "",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/XPLaAT3zOAU/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/XPLaAT3zOAU/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/XPLaAT3zOAU/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "localized": {
+                    "title": "Funny moments",
+                    "description": ""
+                }
+            },
+            "contentDetails": {
+                "itemCount": 3
+            }
+        },
+        {
+            "kind": "youtube#playlist",
+            "etag": "RIDvqTZJrROOYS2QY_81A3VBKcE",
+            "id": "PLm8BLVaCFH8DVdH9PmYYtbPSqjZoVoFB8",
+            "snippet": {
+                "publishedAt": "2022-06-11T03:01:28Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "Dead Chat moments",
+                "description": "",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/6GqVenRzaGs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/6GqVenRzaGs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/6GqVenRzaGs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/6GqVenRzaGs/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/6GqVenRzaGs/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "localized": {
+                    "title": "Dead Chat moments",
+                    "description": ""
+                }
+            },
+            "contentDetails": {
+                "itemCount": 1
+            }
+        },
+        {
+            "kind": "youtube#playlist",
+            "etag": "I6G96OxeHVDQbY2We3ekpGenAhQ",
+            "id": "PLm8BLVaCFH8AdaPILBGa97kvxyp5owAIQ",
+            "snippet": {
+                "publishedAt": "2022-06-11T03:01:06Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "Rebirth Island Wins",
+                "description": "",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/IF5FkFEqUqc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/IF5FkFEqUqc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/IF5FkFEqUqc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/IF5FkFEqUqc/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/IF5FkFEqUqc/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "localized": {
+                    "title": "Rebirth Island Wins",
+                    "description": ""
+                }
+            },
+            "contentDetails": {
+                "itemCount": 13
+            }
+        }
+    ]
+}
