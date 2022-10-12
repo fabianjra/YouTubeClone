@@ -77,6 +77,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             guard let channelCell = tableView.dequeueReusableCell(withIdentifier: "\(ChannelCell.self)", for: indexPath) as? ChannelCell else {
                 return UITableViewCell()
             }
+            
+            //Configurar celda:
+            //A como va iterando, es una sola, entonces la pasa por parametro.
+            channelCell.configCell(model: channel[indexPath.row])
+            
             return channelCell
             
         }else if let playlistItems = item as? [PlaylistItemModel.Item] {

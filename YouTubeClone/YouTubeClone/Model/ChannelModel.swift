@@ -20,7 +20,7 @@ struct ChannelModel: Codable {
     struct Item: Codable {
         let kind, etag, id: String
         let snippet: Snippet
-        let statistics: Statistics
+        let statistics: Statistics?
         let brandingSettings: BrandingSettings
         
         // MARK: - Snippet
