@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ChannelCell: UITableViewCell {
     
@@ -35,10 +36,21 @@ class ChannelCell: UITableViewCell {
     
     func configCell(model: ChannelModel.Item){
         channelTitle.text = model.snippet.title
-        
         channelDescriptionLabel.text = model.snippet.snippetDescription
-        
         subscribersCountLabel.text = "\(model.statistics?.subscriberCount ?? "0") subscribers - \(model.statistics?.videoCount ?? "0") videos"
+    
+        //Obtiene el URL de la imagen para usarla en la celda como imagen dinamica (cambia dependiendo de la respuesta del API.
+        if let bannerURL = model.brandingSettings?.image?.bannerExternalURL, let url = URL(string: bannerURL) {
+            bannerImage.kf.setImage(with: url)
+        }
+        
+        let imageURL = model.snippet.thumbnails.medium.url
+        
+        guard let url = URL(string: imageURL) else {
+            return //En caso de que falle, no haga nada.
+        }
+        
+        profileImage.kf.setImage(with: url)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
