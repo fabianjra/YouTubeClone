@@ -26,7 +26,7 @@ struct PlaylistItemModel: Codable {
         struct Snippet: Codable {
             let publishedAt: String
             let channelID, title, snippetDescription: String
-            let thumbnails: Thumbnails
+            let thumbnails: Thumbnails?
             let channelTitle, playlistID: String
             let position: Int
             let resourceID: ResourceID
@@ -47,7 +47,7 @@ struct PlaylistItemModel: Codable {
             
             // MARK: - Thumbnails
             struct Thumbnails: Codable {
-                let thumbnailsDefault, medium, high: Default
+                let thumbnailsDefault, medium, high: Default?
                 let standard, maxres: Default?
 
                 enum CodingKeys: String, CodingKey {

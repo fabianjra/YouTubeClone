@@ -79,7 +79,7 @@ class HomePresenter{
                 
                 //Se pide el ".items" porque en el metodo "getPlaylistItems" no se esta pidiendo el .items
                 //Index: 1
-                objectList.append(playlistItems.items)
+                objectList.append(playlistItems.items.filter({$0.snippet.title != "Private video"})) //Quita los videos privados.
                 sectionTitleList.append(responsePlaylist.first?.snippet.title ?? "")
             }
             

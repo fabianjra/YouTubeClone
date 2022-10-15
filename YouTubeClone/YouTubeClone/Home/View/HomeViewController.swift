@@ -57,6 +57,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         return sectionTitleList[section].description
     }
     
+    //Configura la altura de la celda.
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        //Si la celda es videos o PlaylistItems, se utiliza la siguiente altura:
+        if indexPath.section == 1 || indexPath.section == 2 {
+            return 95.0
+        }
+        
+        return UITableView.automaticDimension
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return objectList.count
     }
@@ -88,12 +99,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             guard let playlistItemsCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
                 return UITableViewCell()
             }
+            
+            playlistItemsCell.configCell(model: playlistItems[indexPath.row])
+            
             return playlistItemsCell
             
         }else if let video = item as? [VideoModel.Item] {
             guard let videoCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
                 return UITableViewCell()
             }
+            
+            videoCell.configCell(model: video[indexPath.row])
+            
             return videoCell
             
         }else if let playlist = item as? [PlaylistModel.Item] {
