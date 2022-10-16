@@ -27,6 +27,8 @@ class ChannelCell: UITableViewCell {
     }
     
     private func configView(){
+        selectionStyle = .none //Para que no se muestre la seleccion de la celda al hacerle tap
+        
         //Cambiar el color de la campana, dependiendo de dark mode o light mode.
         bellImage.image = UIImage(named: "bell")?.withRenderingMode(.alwaysTemplate)
         bellImage.tintColor = UIColor(named: "grayColor")

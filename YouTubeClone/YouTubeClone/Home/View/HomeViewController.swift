@@ -41,8 +41,13 @@ class HomeViewController: UIViewController {
         let nibPlaylist = UINib(nibName: "\(PlaylistCell.self)", bundle: nil)
         tableViewHome.register(nibPlaylist, forCellReuseIdentifier: "\(PlaylistCell.self)")
         
+        //Permite usar un header para un Section del tableView, custom desde el archivo "SectionTitleView".
+        tableViewHome.register(SectionTitleView.self, forHeaderFooterViewReuseIdentifier: "\(SectionTitleView.self)")
+        
         tableViewHome.delegate = self
         tableViewHome.dataSource = self
+        
+        tableViewHome.separatorStyle = .none //Oculta la linea gris separadora de celdas.
     }
     
     // MARK: - Navigation
@@ -53,9 +58,13 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
+    /*
+     Ya no se usa porque ahora se esta utilizando el metodo "viewForHeaderInSection" para usar una celda personalizada para asignar al titulo de cada section.
+     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionTitleList[section].description
     }
+     */
     
     //Configura la altura de la celda.
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -117,10 +126,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             guard let playlistCell = tableView.dequeueReusableCell(withIdentifier: "\(PlaylistCell.self)", for: indexPath) as? PlaylistCell else {
                 return UITableViewCell()
             }
+            
+            playlistCell.configCell(model: playlist[indexPath.row])
+            
             return playlistCell
         }
         
         return UITableViewCell()
+    }
+    
+    //Permite personalizar el Header de un Section, en base a una celda personalizada llamada "SectionTitleView".
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let sectionView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "\(SectionTitleView.self)") as? SectionTitleView else {
+            return nil
+        }
+        
+        //Configura la celda personalizada.
+        sectionView.title.text = sectionTitleList[section]
+        sectionView.configView()
+        return sectionView
     }
 }
 

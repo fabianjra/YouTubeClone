@@ -23,7 +23,7 @@ class VideoCell: UITableViewCell {
     }
     
     private func configView(){
-        
+        selectionStyle = .none //Para que no se muestre la seleccion de la celda al hacerle tap
     }
     
     //Se recibe Any, porque esta misma celda se esta utiliznado para Videos y PlaylistItem, entonces puede ser cualquiera de los 2.

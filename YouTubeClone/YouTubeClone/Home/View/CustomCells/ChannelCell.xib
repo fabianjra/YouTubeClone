@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="428" id="KGk-i7-Jjw" customClass="ChannelCell" customModule="YouTubeClone" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="305" id="KGk-i7-Jjw" customClass="ChannelCell" customModule="YouTubeClone" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="428"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -25,13 +25,13 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aq3-AX-X18">
-                        <rect key="frame" x="0.0" y="104" width="375" height="324"/>
+                        <rect key="frame" x="13" y="104" width="349" height="324"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUj-2W-UD0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="349" height="70"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="channelProfile" translatesAutoresizingMaskIntoConstraints="NO" id="ahQ-xx-Hri">
-                                        <rect key="frame" x="162" y="9.6666666666666714" width="51" height="51"/>
+                                        <rect key="frame" x="149" y="9.6666666666666714" width="51" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="Oru-UH-acl"/>
                                             <constraint firstAttribute="width" constant="51" id="jTV-xD-XQt"/>
@@ -46,22 +46,22 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FabianJRA Games MOCK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q23-2p-34O">
-                                <rect key="frame" x="0.0" y="70" width="375" height="25.333333333333329"/>
+                                <rect key="frame" x="0.0" y="70" width="349" height="25.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" name="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96i-xA-ogX">
-                                <rect key="frame" x="0.0" y="95.333333333333343" width="375" height="201.00000000000003"/>
+                                <rect key="frame" x="0.0" y="95.333333333333343" width="349" height="201.00000000000003"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBSCRIBED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoY-71-OwY">
-                                        <rect key="frame" x="141.66666666666666" y="8" width="92" height="184"/>
+                                        <rect key="frame" x="128.66666666666666" y="8" width="92" height="184"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" name="grayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" translatesAutoresizingMaskIntoConstraints="NO" id="At8-WU-qTx">
-                                        <rect key="frame" x="233.66666666666666" y="90.999999999999972" width="16" height="18"/>
+                                        <rect key="frame" x="220.66666666666666" y="90.999999999999972" width="16" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="iYy-nI-jzb"/>
                                             <constraint firstAttribute="width" constant="16" id="xw8-Mf-ZWe"/>
@@ -78,13 +78,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 subscribers - 262 videos MOCK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrK-Ia-7nJ">
-                                <rect key="frame" x="0.0" y="296.33333333333331" width="375" height="14.333333333333314"/>
+                                <rect key="frame" x="0.0" y="296.33333333333331" width="349" height="14.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" name="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gameplays de Warzone, partidas ganadas y videos cortos. MOCK" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5b-1B-hxv">
-                                <rect key="frame" x="0.0" y="310.66666666666669" width="375" height="13.333333333333314"/>
+                                <rect key="frame" x="0.0" y="310.66666666666669" width="349" height="13.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" name="grayColor"/>
                                 <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                         </subviews>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HKl-Kc-Phy">
-                        <rect key="frame" x="365" y="413.33333333333331" width="10" height="16.333333333333314"/>
+                        <rect key="frame" x="359" y="413.33333333333331" width="10" height="16.333333333333314"/>
                         <color key="tintColor" name="grayColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="obk-kt-Ubd"/>
@@ -103,14 +103,14 @@
                 <color key="backgroundColor" name="backgroundColor"/>
                 <constraints>
                     <constraint firstItem="kFm-Wq-Ch0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0N0-eN-WQ4"/>
+                    <constraint firstAttribute="trailing" secondItem="HKl-Kc-Phy" secondAttribute="trailing" constant="6" id="0NW-lO-NEy"/>
                     <constraint firstAttribute="bottom" secondItem="aq3-AX-X18" secondAttribute="bottom" id="0pe-8t-QG5"/>
                     <constraint firstAttribute="trailing" secondItem="kFm-Wq-Ch0" secondAttribute="trailing" id="8Mz-Zt-Qns"/>
                     <constraint firstItem="aq3-AX-X18" firstAttribute="top" secondItem="kFm-Wq-Ch0" secondAttribute="bottom" id="JY2-H2-gfa"/>
                     <constraint firstItem="HKl-Kc-Phy" firstAttribute="centerY" secondItem="Y5b-1B-hxv" secondAttribute="centerY" id="KgK-vc-LE7"/>
-                    <constraint firstItem="aq3-AX-X18" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cFd-j7-IqO"/>
+                    <constraint firstItem="aq3-AX-X18" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="cFd-j7-IqO"/>
                     <constraint firstItem="kFm-Wq-Ch0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cbK-5p-QHH"/>
-                    <constraint firstAttribute="trailing" secondItem="aq3-AX-X18" secondAttribute="trailing" id="drl-XZ-Nrn"/>
-                    <constraint firstItem="HKl-Kc-Phy" firstAttribute="trailing" secondItem="Y5b-1B-hxv" secondAttribute="trailing" id="swB-DA-6hF"/>
+                    <constraint firstAttribute="trailing" secondItem="aq3-AX-X18" secondAttribute="trailing" constant="13" id="drl-XZ-Nrn"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -124,7 +124,7 @@
                 <outlet property="subscribeLabel" destination="PoY-71-OwY" id="kwb-Tb-mdj"/>
                 <outlet property="subscribersCountLabel" destination="rrK-Ia-7nJ" id="ui4-eV-JBv"/>
             </connections>
-            <point key="canvasLocation" x="119.23076923076923" y="155.68720379146919"/>
+            <point key="canvasLocation" x="119.23076923076923" y="111.96682464454976"/>
         </tableViewCell>
     </objects>
     <resources>
