@@ -25,6 +25,10 @@
 		40F4485528FDEC7A00304ADF /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4485328FDEC7A00304ADF /* BottomSheetViewController.swift */; };
 		40F4485628FDEC7A00304ADF /* BottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F4485428FDEC7A00304ADF /* BottomSheetViewController.xib */; };
 		40F4485928FE295000304ADF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4485828FE295000304ADF /* UIView+Extension.swift */; };
+		40F4485E28FE322200304ADF /* VideosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4485D28FE322200304ADF /* VideosPresenter.swift */; };
+		40F4486028FE323300304ADF /* VideosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4485F28FE323300304ADF /* VideosProvider.swift */; };
+		40F4486228FE378D00304ADF /* VideosProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4486128FE378D00304ADF /* VideosProviderMock.swift */; };
+		40F4486428FE407B00304ADF /* VideoList.json in Resources */ = {isa = PBXBuildFile; fileRef = 40F4486328FE407B00304ADF /* VideoList.json */; };
 		65003AEB2F856B6C2585A0F8 /* Pods_YouTubeClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4675C9B280E6F2510E1FFDE /* Pods_YouTubeClone.framework */; };
 		E9DCCB0E2849B6F500F462ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCCB0D2849B6F500F462ED /* AppDelegate.swift */; };
 		E9DCCB102849B6F500F462ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCCB0F2849B6F500F462ED /* SceneDelegate.swift */; };
@@ -77,6 +81,10 @@
 		40F4485328FDEC7A00304ADF /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		40F4485428FDEC7A00304ADF /* BottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetViewController.xib; sourceTree = "<group>"; };
 		40F4485828FE295000304ADF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		40F4485D28FE322200304ADF /* VideosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosPresenter.swift; sourceTree = "<group>"; };
+		40F4485F28FE323300304ADF /* VideosProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosProvider.swift; sourceTree = "<group>"; };
+		40F4486128FE378D00304ADF /* VideosProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosProviderMock.swift; sourceTree = "<group>"; };
+		40F4486328FE407B00304ADF /* VideoList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoList.json; sourceTree = "<group>"; };
 		E7961008A8F8E42270AD0730 /* Pods-YouTubeClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeClone.release.xcconfig"; path = "Target Support Files/Pods-YouTubeClone/Pods-YouTubeClone.release.xcconfig"; sourceTree = "<group>"; };
 		E9DCCB0A2849B6F500F462ED /* YouTubeClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubeClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DCCB0D2849B6F500F462ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +140,7 @@
 				402953D328F1367B0053511B /* PlaylistItems.json */,
 				402953D528F136950053511B /* SearchVideos.json */,
 				402953D728F138980053511B /* VideoSingle.json */,
+				40F4486328FE407B00304ADF /* VideoList.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -165,6 +174,31 @@
 				40F4485828FE295000304ADF /* UIView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		40F4485A28FE31FC00304ADF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				40F4485D28FE322200304ADF /* VideosPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		40F4485B28FE320700304ADF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40F4485C28FE320C00304ADF /* Provider */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		40F4485C28FE320C00304ADF /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				40F4485F28FE323300304ADF /* VideosProvider.swift */,
+				40F4486128FE378D00304ADF /* VideosProviderMock.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		5D6785435836AC4D717267FF /* Frameworks */ = {
@@ -259,6 +293,8 @@
 		E9DCCB2E2851851600F462ED /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				40F4485B28FE320700304ADF /* Model */,
+				40F4485A28FE31FC00304ADF /* Presenter */,
 				E9DCCB372851858100F462ED /* VideosViewController.swift */,
 				E9DCCB382851858100F462ED /* VideosViewController.xib */,
 			);
@@ -423,6 +459,7 @@
 				40F4485628FDEC7A00304ADF /* BottomSheetViewController.xib in Resources */,
 				E9DCCB3A2851858100F462ED /* VideosViewController.xib in Resources */,
 				402953DF28F13FDB0053511B /* ChannelCell.xib in Resources */,
+				40F4486428FE407B00304ADF /* VideoList.json in Resources */,
 				E9DCCB152849B6F500F462ED /* Main.storyboard in Resources */,
 				E9DCCB362851856400F462ED /* HomeViewController.xib in Resources */,
 				E9DCCB422851859A00F462ED /* ChannelsViewController.xib in Resources */,
@@ -483,6 +520,7 @@
 				E9DCCB4C2851987100F462ED /* NetworkError.swift in Sources */,
 				E9DCCB392851858100F462ED /* VideosViewController.swift in Sources */,
 				E9DCCB2C2851836D00F462ED /* MainViewController.swift in Sources */,
+				40F4486028FE323300304ADF /* VideosProvider.swift in Sources */,
 				E9DCCB122849B6F500F462ED /* ViewController.swift in Sources */,
 				E9DCCB4E2851989800F462ED /* RequestModel.swift in Sources */,
 				E9DCCB232851725B00F462ED /* PlaylistModel.swift in Sources */,
@@ -500,11 +538,13 @@
 				40F4485928FE295000304ADF /* UIView+Extension.swift in Sources */,
 				E9DCCB2A2851835200F462ED /* RootPageViewController.swift in Sources */,
 				E9DCCB572851B02400F462ED /* HomeProvider.swift in Sources */,
+				40F4486228FE378D00304ADF /* VideosProviderMock.swift in Sources */,
 				E9DCCB592851B7C800F462ED /* HomePresenter.swift in Sources */,
 				402953E628F140060053511B /* PlaylistCell.swift in Sources */,
 				402953DE28F13FDB0053511B /* ChannelCell.swift in Sources */,
 				E9DCCB5B2854189300F462ED /* SearchModel.swift in Sources */,
 				E9DCCB2728517D0900F462ED /* VideoModel.swift in Sources */,
+				40F4485E28FE322200304ADF /* VideosPresenter.swift in Sources */,
 				E9DCCB102849B6F500F462ED /* SceneDelegate.swift in Sources */,
 				402953CD28F0B3670053511B /* HomeProviderMock.swift in Sources */,
 				E9DCCB5F285429CA00F462ED /* PlaylistItemModel.swift in Sources */,

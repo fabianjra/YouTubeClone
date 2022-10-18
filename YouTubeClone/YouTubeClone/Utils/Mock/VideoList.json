@@ -1,0 +1,1712 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "Droxk0bEVeHCoWFBoT1bsa1nYUg",
+    "nextPageToken": "CDIQAA",
+    "regionCode": "CR",
+    "pageInfo": {
+        "totalResults": 271,
+        "resultsPerPage": 50
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "aH8thdi5wasPuEHDny2ui085Tqo",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "wgTiNTwlzi8"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-17T05:34:44Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Queda Fabián el manco contra uno solo en el último círculo y pasa esto 😱",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/wgTiNTwlzi8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/wgTiNTwlzi8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/wgTiNTwlzi8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-17T05:34:44Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "xmUQ-FLNLkVhlYFs6dTiQreUljw",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "bbITCuJnG_0"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-17T05:21:43Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - El gas de nuestro lado 💨",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/bbITCuJnG_0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/bbITCuJnG_0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/bbITCuJnG_0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-17T05:21:43Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "bgKONUCLkPY0_-KGX99EIiOcDVs",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "TO30nWJPlR0"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-17T05:08:45Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Vuelve el Rusher Joshua 🕺🏻",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/TO30nWJPlR0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/TO30nWJPlR0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/TO30nWJPlR0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-17T05:08:45Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "sHDucg0YR-OGwkWPtLXYozi9v98",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "P7ydi8PBQJ0"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-16T05:00:57Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Sabadeando por la noche con unos mudos 🤐",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/P7ydi8PBQJ0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/P7ydi8PBQJ0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/P7ydi8PBQJ0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-16T05:00:57Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "qVa_3ryOnpNSx_k0EgfK7xEtOZc",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "-Ert4-Tbzbs"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-14T20:41:11Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Rusheando un viernes casual 🕺🏻",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/-Ert4-Tbzbs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/-Ert4-Tbzbs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/-Ert4-Tbzbs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-14T20:41:11Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "YdkliHhUnPDUVQ1mWEVj5KRjvH8",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "3jxGo0tjetY"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-13T04:17:33Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Arrazando en la isla 🏝️🔫☠️",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/3jxGo0tjetY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/3jxGo0tjetY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/3jxGo0tjetY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-13T04:17:33Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "X4Zzv9bCTMQIxRDGZXRxu0n0reY",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "UBOQzV9zVJQ"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-13T03:28:03Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Full team de vuelta 🔫",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/UBOQzV9zVJQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/UBOQzV9zVJQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/UBOQzV9zVJQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-13T03:28:03Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "QPp8lnytb5UexRHVL5BFY7W1MTs",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "YKl0rRBgQzY"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-13T03:14:49Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Aprendiendo a jugar con Mouse y Teclado (primer win usándolos) ⌨️ 🖱️",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/YKl0rRBgQzY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/YKl0rRBgQzY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/YKl0rRBgQzY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-13T03:14:49Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "q7ivgsmoUxmHBQArGIyCE8aBDYk",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "O3BciPAQ1Pg"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-12T16:26:15Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - El regreso después de medio año 😳",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/O3BciPAQ1Pg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/O3BciPAQ1Pg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/O3BciPAQ1Pg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-12T16:26:15Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "gQ1ekoOKHG32WXdKuS0cBgEoTnk",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "6GqVenRzaGs"
+            },
+            "snippet": {
+                "publishedAt": "2022-04-29T02:30:10Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD WZ - Dead chat moment",
+                "description": "Niño es poseído mientras juega Warzone.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/6GqVenRzaGs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/6GqVenRzaGs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/6GqVenRzaGs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-29T02:30:10Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "3dz3f8U3jL79apJkzVEbw_MqvMY",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "IF5FkFEqUqc"
+            },
+            "snippet": {
+                "publishedAt": "2022-04-27T03:31:21Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD WZ - Estrenando Kar98 Oro (Felipe gana con 1 bala 😱)",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/IF5FkFEqUqc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/IF5FkFEqUqc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/IF5FkFEqUqc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-27T03:31:21Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "uCGVpoCKp5M0dPVEwxGHBnNTRk4",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "MTCix0dRIvo"
+            },
+            "snippet": {
+                "publishedAt": "2022-04-21T04:24:14Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - De químicos a prisión",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/MTCix0dRIvo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/MTCix0dRIvo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/MTCix0dRIvo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-21T04:24:14Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "6kDVNC80_M6ASMuhWnADV9fdKe0",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "rN9KLzjPwFI"
+            },
+            "snippet": {
+                "publishedAt": "2022-04-21T04:19:43Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - My name Chicky 🐤",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/rN9KLzjPwFI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/rN9KLzjPwFI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/rN9KLzjPwFI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-21T04:19:43Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "H10np2NmXzV5_ZDhkQtuUoAwUDE",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "pB5l59FZw8g"
+            },
+            "snippet": {
+                "publishedAt": "2022-04-18T04:11:08Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Helicopter 🚁",
+                "description": "https://store.playstation.com/#!/tid=CUSA00572_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/pB5l59FZw8g/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/pB5l59FZw8g/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/pB5l59FZw8g/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-18T04:11:08Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "fv8Pm3s1yIIGKcXQNxCwueu5CUY",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "gyo0pH9iP2A"
+            },
+            "snippet": {
+                "publishedAt": "2022-04-12T05:11:57Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Se me desconecta el control en media partida y pasa esto 😱",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/gyo0pH9iP2A/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/gyo0pH9iP2A/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/gyo0pH9iP2A/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-12T05:11:57Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "R8RnuRkYx9VSl3xKrBrIbfkKYV8",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "aXO_bqYKkvg"
+            },
+            "snippet": {
+                "publishedAt": "2022-04-12T05:03:17Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Victoria en “Jacó” 🏖 (ver referencia en el siguiente video)",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/aXO_bqYKkvg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/aXO_bqYKkvg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/aXO_bqYKkvg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-12T05:03:17Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "cvuvRJ7DYXDsWlSLeXa162HUc9M",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "dbX6_-3urPU"
+            },
+            "snippet": {
+                "publishedAt": "2022-04-03T04:35:30Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Campeando con Felipe en Duos",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/dbX6_-3urPU/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/dbX6_-3urPU/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/dbX6_-3urPU/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-03T04:35:30Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "KonHcTKir5z89v4fTp4XZuk56zw",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "ecqyVSmnGH0"
+            },
+            "snippet": {
+                "publishedAt": "2022-03-24T04:18:35Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Estrenando nuevo mapa Rebirth en Tríos",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/ecqyVSmnGH0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/ecqyVSmnGH0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/ecqyVSmnGH0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-03-24T04:18:35Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "PFrn_iHih5QHD5LCaCp_fV8zjgQ",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "pyIZ-7nRR78"
+            },
+            "snippet": {
+                "publishedAt": "2022-03-24T04:13:46Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Rushando Rushando",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/pyIZ-7nRR78/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/pyIZ-7nRR78/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/pyIZ-7nRR78/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-03-24T04:13:46Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "zsmVq3GB25TD3QH6vAkQuLfdtdQ",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "pJo_Zq9NDe8"
+            },
+            "snippet": {
+                "publishedAt": "2022-03-23T21:18:05Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Probando SOLOS en nuevo mapa Rebirth",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/pJo_Zq9NDe8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/pJo_Zq9NDe8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/pJo_Zq9NDe8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-03-23T21:18:05Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "B-i-o1vT4-t-GThdPNBNzMvDlpI",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "asHDS2G1wRk"
+            },
+            "snippet": {
+                "publishedAt": "2022-03-14T04:30:59Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Caemos en NOVA (Sale mal)",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/asHDS2G1wRk/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/asHDS2G1wRk/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/asHDS2G1wRk/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-03-14T04:30:59Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "nvRBdXAv9zzqb4Z52I7Is4rD2Vc",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "1JIRe8C8-c0"
+            },
+            "snippet": {
+                "publishedAt": "2022-03-07T04:22:14Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Felipe contra el carro parte 2 🚗",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/1JIRe8C8-c0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/1JIRe8C8-c0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/1JIRe8C8-c0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-03-07T04:22:14Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "-JciXE3eJOYFUvj91oQZWfXvhOk",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "wixRUC4TMQw"
+            },
+            "snippet": {
+                "publishedAt": "2022-03-02T05:54:48Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Jugando con Megacron-19",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/wixRUC4TMQw/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/wixRUC4TMQw/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/wixRUC4TMQw/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-03-02T05:54:48Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "11NjeF8h5sB2pODGHgLouof5Ddw",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "76plMnf1qFo"
+            },
+            "snippet": {
+                "publishedAt": "2022-03-02T05:38:26Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Felipe contra el carro 🚗",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/76plMnf1qFo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/76plMnf1qFo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/76plMnf1qFo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-03-02T05:38:26Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "tPq8tumoc2IgLWAYbW4dDt4ILA4",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "YD5v5SjnGZM"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-11T02:12:45Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Rusheando Duos",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/YD5v5SjnGZM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/YD5v5SjnGZM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/YD5v5SjnGZM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-11T02:12:45Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "6z3OulDwZURGc4mP78mObEytY8w",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "RnS41ssUQYY"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-11T01:03:10Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Campeando con justificación (corona)",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/RnS41ssUQYY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/RnS41ssUQYY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/RnS41ssUQYY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-11T01:03:10Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "P1cmX3gcxdqav8jfpIF-xYY9Yvg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "-uYdLWVLfOA"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-10T05:39:34Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD MW - Desbloqueando duales Renetti",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/-uYdLWVLfOA/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/-uYdLWVLfOA/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/-uYdLWVLfOA/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-10T05:39:34Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "_20aUz7SgUhVNb2IuvXb9bmTYFg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "JjHrRduJ2Mg"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-05T05:01:49Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD - Warzone es un carrusel de emociones 🎡🤪",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/JjHrRduJ2Mg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/JjHrRduJ2Mg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/JjHrRduJ2Mg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-05T05:01:49Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "Urcrp3pXPBBs51gaNMBtQP8OX1w",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "0EVX-Xj8gD0"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-05T04:54:14Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Llegó la artillería pesada 🚗",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/0EVX-Xj8gD0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/0EVX-Xj8gD0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/0EVX-Xj8gD0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-05T04:54:14Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "b9sYHxQoh-vj5-2k9U3wjJ8UR78",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "DCEKJ8r6Fr8"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-05T04:37:04Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Franqueando en el techo de químicos (Sale mal)",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/DCEKJ8r6Fr8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-05T04:37:04Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "frDmxwOqmzqXs4o5xQFHeyChLlM",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "0jtREWwlT6Q"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-01T04:44:53Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Espetando el círculo final desde el cielo 👀",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/0jtREWwlT6Q/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/0jtREWwlT6Q/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/0jtREWwlT6Q/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-01T04:44:53Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "H-0ncdbK9j43Uxr8KQoIralY6f4",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "Riy1VjU0bMQ"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-31T04:40:35Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Felipe rusheando 🌊",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Riy1VjU0bMQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Riy1VjU0bMQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Riy1VjU0bMQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-31T04:40:35Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "KemWlc_YiVGaBgcdq8OP-ZecFas",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "qI6dETzYdEI"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-25T05:19:23Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - La señal divina de Felipe",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/qI6dETzYdEI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/qI6dETzYdEI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/qI6dETzYdEI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-25T05:19:23Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "J1qQhbe51SZJrMZak2kCa6witFY",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "8fs6bGGyFwI"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-25T05:17:44Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - El acto heroico de Felipe",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/8fs6bGGyFwI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/8fs6bGGyFwI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/8fs6bGGyFwI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-25T05:17:44Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "q7vlQoAlB80Nab8vmrZhMZkTvTU",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "oUNvvk7Uwsw"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-22T03:11:29Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Helicopter Helicopter 🚁",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/oUNvvk7Uwsw/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/oUNvvk7Uwsw/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/oUNvvk7Uwsw/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-22T03:11:29Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "Fjdnv1ifO8l5F4MgcWBaWp2U13g",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "i6LCm6_v17I"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-20T03:47:56Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Andamos hechos un jolgorio 🥳",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/i6LCm6_v17I/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/i6LCm6_v17I/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/i6LCm6_v17I/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-20T03:47:56Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "l-U8x9jveVsDnRVQ9OrsoXMfTRk",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "vJngLSbSbNo"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-20T03:42:56Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Recorriendo la isla 🏝",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/vJngLSbSbNo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/vJngLSbSbNo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/vJngLSbSbNo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-20T03:42:56Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "HEpltN1SvG3IPe6CQlfwx6KJovo",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "bMbkIrU697E"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-20T03:39:12Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Cero kills pero con un win 🕺🏻",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/bMbkIrU697E/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/bMbkIrU697E/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/bMbkIrU697E/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-20T03:39:12Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "eTkDFScZT7N_JIuizW4w_YgZAzA",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "XUlNwhdT12U"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-19T03:38:48Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Saludame a tu abuelo 👴🏻",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/XUlNwhdT12U/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/XUlNwhdT12U/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/XUlNwhdT12U/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-19T03:38:48Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "sMmY-eUwvF2eld9vthGXBNdsA6w",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "wE8vo_ixVt0"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-15T04:23:50Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Un viernes por la noche más, manqueando en Rebirth",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/wE8vo_ixVt0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/wE8vo_ixVt0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/wE8vo_ixVt0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-15T04:23:50Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "z3pC9OGChawF5_EwrYflnAWzme8",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "SITVTSYQIEg"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-02T05:31:08Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Jugando como nunca pero perdiendo como siempre",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/SITVTSYQIEg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/SITVTSYQIEg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/SITVTSYQIEg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-02T05:31:08Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "Q773vd-lQqwyuPghbAelpWaEYAg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "2LwH0Mv8atw"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-02T05:28:20Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Primer win del año 2022",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/2LwH0Mv8atw/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/2LwH0Mv8atw/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/2LwH0Mv8atw/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-02T05:28:20Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "L0Pr751mYo0lc7zZmio_DI9iWiA",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "UrUnefa7mAI"
+            },
+            "snippet": {
+                "publishedAt": "2021-12-30T05:35:45Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Mitad del Lobby || Trio vs. Quads",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/UrUnefa7mAI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/UrUnefa7mAI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/UrUnefa7mAI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-12-30T05:35:45Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "HoUS2ip93qrJXVUUa3dlJ-E1lqk",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "_6qCes6TksQ"
+            },
+            "snippet": {
+                "publishedAt": "2021-12-30T03:28:32Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Duos en la isla con Joferava",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/_6qCes6TksQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/_6qCes6TksQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/_6qCes6TksQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-12-30T03:28:32Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "gMdkzXvLw6twwweeH6qmxWb_uII",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "kyE-Co2YF9w"
+            },
+            "snippet": {
+                "publishedAt": "2021-12-29T05:08:29Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Manqueando en caldera 🏝",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/kyE-Co2YF9w/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/kyE-Co2YF9w/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/kyE-Co2YF9w/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-12-29T05:08:29Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "stw2Sx66MrDO3kuGzNKdtpk6OxU",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "g0q7tzFBZHI"
+            },
+            "snippet": {
+                "publishedAt": "2021-12-23T04:47:50Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Tiro lejano con STG44 a 325m",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/g0q7tzFBZHI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/g0q7tzFBZHI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/g0q7tzFBZHI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-12-23T04:47:50Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "IdmnVx3_Y-DgETR3Mib_VVRBe7s",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "-kDsnHuOcdE"
+            },
+            "snippet": {
+                "publishedAt": "2021-12-20T03:52:07Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Nos sacan de químicos y pasa esto 👀",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/-kDsnHuOcdE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/-kDsnHuOcdE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/-kDsnHuOcdE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-12-20T03:52:07Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "uNz6v-Pao7lt0vJ38sKNfERggdI",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "G-yY_pb8S7c"
+            },
+            "snippet": {
+                "publishedAt": "2021-12-20T03:40:50Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Todo en manos de FabianJRA 👐🏻",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/G-yY_pb8S7c/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/G-yY_pb8S7c/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/G-yY_pb8S7c/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-12-20T03:40:50Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "YIaCGVVdKL-FTd04Na6QqpFd_rk",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "4wDjutIELEQ"
+            },
+            "snippet": {
+                "publishedAt": "2021-12-18T05:07:31Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Jugando con unos pelaos randoms que ni hablan 😒",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/4wDjutIELEQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/4wDjutIELEQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/4wDjutIELEQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-12-18T05:07:31Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "YsAJlL2gKIi5iS7pfj6pJPqHvto",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "pfWAuKhu33A"
+            },
+            "snippet": {
+                "publishedAt": "2021-12-18T05:05:56Z",
+                "channelId": "UCgk9n71LlLGmGfv5y62ni2A",
+                "title": "CoD Warzone - Rusheando 3 vs 1 🏃🏻‍♂️",
+                "description": "https://store.playstation.com/#!/tid=CUSA15239_00.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/pfWAuKhu33A/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/pfWAuKhu33A/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/pfWAuKhu33A/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "FabianJRA Games",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-12-18T05:05:56Z"
+            }
+        }
+    ]
+}
