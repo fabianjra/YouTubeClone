@@ -18,6 +18,10 @@ class PlaylistCell: UITableViewCell {
     @IBOutlet weak var imgShowPlaylistOverlay: UIImageView!
     @IBOutlet weak var dotsImage: UIImageView!
     
+    //Esta clase necesita levantar la vista de opciones para los puntos (dots), pero es un TableViewCell, entonces no puede directamente.
+    //Para poder hacer esto, se va a crear un Closure  que le indica a la vista que implementa esta celda, que debe abrir la ventana de opciones de Dots.
+    var didTapDotsButton: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -47,7 +51,14 @@ class PlaylistCell: UITableViewCell {
         lblVideoCount.text = String(model.contentDetails.itemCount) + " videos"
         lblVideoCountOverlay.text = String(model.contentDetails.itemCount)
     }
-
+    
+    @IBAction func btnDotsTap(_ sender: UIButton) {
+        //Se evalua el Closure opcional, con Safe Unwrap:
+        if let tap = didTapDotsButton {
+            tap() //Devuelve la informacion a quien implemente el Closure que esta afuera: "var didTapDotButton: (()->void)?"
+        }
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

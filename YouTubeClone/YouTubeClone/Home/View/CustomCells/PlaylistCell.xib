@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="dark"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -81,14 +81,26 @@
                             <constraint firstAttribute="height" constant="13" id="cv8-kU-EaC"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBt-xC-sF3">
+                        <rect key="frame" x="356" y="207" width="13" height="13"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
+                        <connections>
+                            <action selector="btnDotsTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="g08-aC-bKv"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Dpc-Es-dTk" secondAttribute="trailing" constant="13" id="0ox-Vb-B4W"/>
+                    <constraint firstItem="CBt-xC-sF3" firstAttribute="width" secondItem="YKd-QZ-SG1" secondAttribute="width" id="4fI-V0-Sn6"/>
                     <constraint firstItem="YKd-QZ-SG1" firstAttribute="centerY" secondItem="IeV-gU-2dZ" secondAttribute="centerY" id="5jL-za-Ybb"/>
+                    <constraint firstItem="CBt-xC-sF3" firstAttribute="centerY" secondItem="YKd-QZ-SG1" secondAttribute="centerY" id="8V5-rz-fwD"/>
                     <constraint firstItem="IeV-gU-2dZ" firstAttribute="top" secondItem="Dpc-Es-dTk" secondAttribute="bottom" id="CaI-SU-UHz"/>
                     <constraint firstItem="Dpc-Es-dTk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DtP-YL-vDf"/>
                     <constraint firstItem="FEC-9i-DHQ" firstAttribute="height" secondItem="Dpc-Es-dTk" secondAttribute="height" id="NAj-im-K2I"/>
+                    <constraint firstItem="CBt-xC-sF3" firstAttribute="height" secondItem="YKd-QZ-SG1" secondAttribute="height" id="OaZ-Ke-TRM"/>
                     <constraint firstItem="IeV-gU-2dZ" firstAttribute="width" secondItem="Dpc-Es-dTk" secondAttribute="width" id="UXF-W7-6nH"/>
+                    <constraint firstItem="CBt-xC-sF3" firstAttribute="centerX" secondItem="YKd-QZ-SG1" secondAttribute="centerX" id="ZLx-bY-f0b"/>
                     <constraint firstItem="Dpc-Es-dTk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="bqb-Un-mRR"/>
                     <constraint firstItem="IeV-gU-2dZ" firstAttribute="centerX" secondItem="Dpc-Es-dTk" secondAttribute="centerX" id="jla-w2-jsj"/>
                     <constraint firstAttribute="bottom" secondItem="IeV-gU-2dZ" secondAttribute="bottom" constant="58" id="lxT-DL-fav"/>

@@ -111,6 +111,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             
             playlistItemsCell.configCell(model: playlistItems[indexPath.row])
             
+            //Llama al Closure del VideoCell, creando un Closure.
+            playlistItemsCell.didTapDotsButton = { [weak self] in //Evitar Retain Cicle (fuga de memoria)
+                self?.configButtonSheet() //Se utiliza self porque está dentro de un Closure.
+            }
+            
             return playlistItemsCell
             
         }else if let video = item as? [VideoModel.Item] {
@@ -120,6 +125,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             
             videoCell.configCell(model: video[indexPath.row])
             
+            //Llama al Closure del VideoCell, creando un Closure.
+            videoCell.didTapDotsButton = { [weak self] in //Evitar Retain Cicle (fuga de memoria)
+                self?.configButtonSheet() //Se utiliza self porque está dentro de un Closure.
+            }
+            
             return videoCell
             
         }else if let playlist = item as? [PlaylistModel.Item] {
@@ -128,6 +138,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             }
             
             playlistCell.configCell(model: playlist[indexPath.row])
+            
+            //Llama al Closure del VideoCell, creando un Closure.
+            playlistCell.didTapDotsButton = { [weak self] in //Evitar Retain Cicle (fuga de memoria)
+                self?.configButtonSheet() //Se utiliza self porque está dentro de un Closure.
+            }
             
             return playlistCell
         }
@@ -145,6 +160,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         sectionView.title.text = sectionTitleList[section]
         sectionView.configView()
         return sectionView
+    }
+    
+    //Presentar la lista de opciones del boton Dots.
+    private func configButtonSheet(){
+        let vc = BottomSheetViewController()
+        vc.modalPresentationStyle = .overCurrentContext //Quiere decir que se va a presentar sobre la pantalla principal.
+        self.present(vc, animated: false)
     }
 }
 

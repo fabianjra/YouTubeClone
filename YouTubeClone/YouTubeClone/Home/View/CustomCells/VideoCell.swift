@@ -16,6 +16,10 @@ class VideoCell: UITableViewCell {
     @IBOutlet weak var viewsCount: UILabel!
     @IBOutlet weak var dotsImage: UIImageView!
     
+    //Esta clase necesita levantar la vista de opciones para los puntos (dots), pero es un TableViewCell, entonces no puede directamente.
+    //Para poder hacer esto, se va a crear un Closure  que le indica a la vista que implementa esta celda, que debe abrir la ventana de opciones de Dots.
+    var didTapDotsButton: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -58,7 +62,15 @@ class VideoCell: UITableViewCell {
             viewsCount.text = "332 views - 3 months ago"
         }
     }
-
+    
+    @IBAction func btnDotsTap(_ sender: UIButton) {
+        
+        //Se evalua el Closure opcional, con Safe Unwrap:
+        if let tap = didTapDotsButton {
+            tap() //Devuelve la informacion a quien implemente el Closure que esta afuera: "var didTapDotButton: (()->void)?"
+        }
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
