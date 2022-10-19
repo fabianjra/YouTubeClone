@@ -32,6 +32,7 @@
 		40F4486628FF7D6A00304ADF /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4486528FF7D6A00304ADF /* UITableView+Extension.swift */; };
 		40F4486828FFB14800304ADF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4486728FFB14800304ADF /* UIColor+Extension.swift */; };
 		40F4486A28FFB46000304ADF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4486928FFB46000304ADF /* UIImage+Extension.swift */; };
+		40F4486C28FFB65100304ADF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4486B28FFB65100304ADF /* BaseViewController.swift */; };
 		65003AEB2F856B6C2585A0F8 /* Pods_YouTubeClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4675C9B280E6F2510E1FFDE /* Pods_YouTubeClone.framework */; };
 		E9DCCB0E2849B6F500F462ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCCB0D2849B6F500F462ED /* AppDelegate.swift */; };
 		E9DCCB102849B6F500F462ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCCB0F2849B6F500F462ED /* SceneDelegate.swift */; };
@@ -91,6 +92,7 @@
 		40F4486528FF7D6A00304ADF /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		40F4486728FFB14800304ADF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		40F4486928FFB46000304ADF /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		40F4486B28FFB65100304ADF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E7961008A8F8E42270AD0730 /* Pods-YouTubeClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeClone.release.xcconfig"; path = "Target Support Files/Pods-YouTubeClone/Pods-YouTubeClone.release.xcconfig"; sourceTree = "<group>"; };
 		E9DCCB0A2849B6F500F462ED /* YouTubeClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubeClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DCCB0D2849B6F500F462ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				E9DCCB50285199D700F462ED /* Constants.swift */,
 				40974C9628E4F22B00889636 /* Utils.swift */,
 				402953D928F13D630053511B /* MockManager.swift */,
+				40F4486B28FFB65100304ADF /* BaseViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				E9DCCB232851725B00F462ED /* PlaylistModel.swift in Sources */,
 				402953E228F13FF80053511B /* VideoCell.swift in Sources */,
 				40974C9728E4F22B00889636 /* Utils.swift in Sources */,
+				40F4486C28FFB65100304ADF /* BaseViewController.swift in Sources */,
 				E9DCCB5D2854234300F462ED /* ChannelModel.swift in Sources */,
 				40F4485528FDEC7A00304ADF /* BottomSheetViewController.swift in Sources */,
 				402953DA28F13D630053511B /* MockManager.swift in Sources */,

@@ -59,6 +59,24 @@ class HomeViewController: UIViewController {
         tableViewHome.dataSource = self
         
         tableViewHome.separatorStyle = .none //Oculta la linea gris separadora de celdas.
+        
+        //Quita el espacio extra entre el Navigationbar y su paerte inferior.
+        //Se resta 15 para quitar el espacio entre el Navigationbar y el top del TableView.
+        //Se resta -80: Porque al final de las celdas, ellas llevan un espacio de padding, entonces cuando llegue a la ultima, se le quita ese espacio en blanco.
+        tableViewHome.contentInset = UIEdgeInsets(top: -15, left: 0, bottom: -80, right: 0)
+    }
+    
+    //Logica para saber cuando debe ocultar o mostrar el Navigationbar (detecta el swipe en base al ScrollView
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pan = scrollView.panGestureRecognizer
+        let velocity = pan.velocity(in: scrollView).y
+        
+        if velocity < -5 {
+            navigationController?.setNavigationBarHidden(true, animated: true)
+            
+        }else if velocity > 5 {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
     }
     
     // MARK: - Navigation

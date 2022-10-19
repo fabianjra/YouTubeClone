@@ -7,14 +7,16 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+//hereda del View base (un tipo de Master Page.
+class MainViewController: BaseViewController {
     
     var rootPageViewController : RootPageViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        //Se invoca al navigationBar de la clase base.
+        configNavigationbar()
     }
     
     
@@ -25,6 +27,11 @@ class MainViewController: UIViewController {
             destination.delegateRoot = self
             rootPageViewController = destination
         }
+    }
+    
+    //Se puede realizar un override a una funcion de la base, para poder hacer con ella cualquier logica.
+    override func dotsButtonPressed() {
+        print("Overrided dotsButtonPressed")
     }
     
 }
