@@ -29,8 +29,11 @@ class VideosViewController: UIViewController {
     private func configTableView(){
         
         //Registrar la unica celda que va a tener
-        let nibVideos = UINib(nibName: "\(VideoCell.self)", bundle: nil)
-        tableViewVideos.register(nibVideos, forCellReuseIdentifier: "\(VideoCell.self)")
+        //let nibVideos = UINib(nibName: "\(VideoCell.self)", bundle: nil)
+        //tableViewVideos.register(nibVideos, forCellReuseIdentifier: "\(VideoCell.self)")
+        
+        //Registra la celda con la extension que se creo, para eivtar hacer 2 lineas de codigo que estan arriba.
+        tableViewVideos.register(cell: VideoCell.self)
         
         tableViewVideos.separatorStyle = .none
         
@@ -54,9 +57,13 @@ extension VideosViewController: UITableViewDelegate, UITableViewDataSource{
         
         let video = videoList[indexPath.row]
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
-            return UITableViewCell()
-        }
+        //Refactoring:
+        let cell = tableView.dequeueReusableCell(for: VideoCell.self, for: indexPath)
+        
+        //Con el Refactoring, se ahorra esta linea de aqui:
+        //guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
+        //    return UITableViewCell()
+        //}
         
         cell.configCell(model: video)
         

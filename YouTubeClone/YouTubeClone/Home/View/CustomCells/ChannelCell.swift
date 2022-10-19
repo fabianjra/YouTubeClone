@@ -30,8 +30,8 @@ class ChannelCell: UITableViewCell {
         selectionStyle = .none //Para que no se muestre la seleccion de la celda al hacerle tap
         
         //Cambiar el color de la campana, dependiendo de dark mode o light mode.
-        bellImage.image = UIImage(named: "bell")?.withRenderingMode(.alwaysTemplate)
-        bellImage.tintColor = UIColor(named: "grayColor")
+        bellImage.image = .bellImage
+        bellImage.tintColor = .grayColor
         
         profileImage.layer.cornerRadius = 51 / 2
     }

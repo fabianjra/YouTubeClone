@@ -31,8 +31,8 @@ class PlaylistCell: UITableViewCell {
     private func configView(){
         selectionStyle = .none //Para que no se muestre la seleccion de la celda al hacerle tap
         
-        dotsImage.image = UIImage(named: "dots")?.withRenderingMode(.alwaysTemplate)
-        dotsImage.tintColor = UIColor(named: "whiteColor")
+        dotsImage.image = .dotsImage
+        dotsImage.tintColor = .whiteColor
         
         //usar siempre el color de Dark mode. (en este caso, blanco)
         imgShowPlaylistOverlay.overrideUserInterfaceStyle = .dark

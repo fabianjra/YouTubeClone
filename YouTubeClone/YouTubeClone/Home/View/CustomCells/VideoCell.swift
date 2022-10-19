@@ -34,8 +34,8 @@ class VideoCell: UITableViewCell {
     func configCell(model: Any){
         
         //Imagen de dots dinamico para dark mode o light mode.
-        dotsImage.image = UIImage(named: "dots")?.withRenderingMode(.alwaysTemplate)
-        dotsImage.tintColor = UIColor(named: "whiteColor")
+        dotsImage.image = .dotsImage
+        dotsImage.tintColor = .whiteColor
         
         //si esta recibiendo el model de video, realiza esta logica.
         if let video = model as? VideoModel.Item{

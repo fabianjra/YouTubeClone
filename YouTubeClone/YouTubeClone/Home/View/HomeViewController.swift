@@ -32,6 +32,9 @@ class HomeViewController: UIViewController {
     }
     
     func configTableView(){
+        
+        //Con el refactoring se ahorran todas estas lineas de codigo.
+        /*
         let nibChannel = UINib(nibName: "\(ChannelCell.self)", bundle: nil)
         tableViewHome.register(nibChannel, forCellReuseIdentifier: "\(ChannelCell.self)")
         
@@ -43,6 +46,14 @@ class HomeViewController: UIViewController {
         
         //Permite usar un header para un Section del tableView, custom desde el archivo "SectionTitleView".
         tableViewHome.register(SectionTitleView.self, forHeaderFooterViewReuseIdentifier: "\(SectionTitleView.self)")
+         */
+        
+        //Registra las celdas con el refactoring de extension, para evitar tantas lineas de codigo:
+        tableViewHome.register(cell: ChannelCell.self)
+        tableViewHome.register(cell: VideoCell.self)
+        tableViewHome.register(cell: PlaylistCell.self)
+        tableViewHome.registerFromClass(headerFooterView: SectionTitleView.self)
+        
         
         tableViewHome.delegate = self
         tableViewHome.dataSource = self
@@ -94,9 +105,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         
         //Valida si en el index de section, puede convertir a ChannelModel.Item, si puede, realiza la logica.
         if let channel = item as? [ChannelModel.Item] {
+            
+            //Refactoring:
+            let channelCell = tableView.dequeueReusableCell(for: ChannelCell.self, for: indexPath)
+            
+            //quitado por refactoring:
+            /*
             guard let channelCell = tableView.dequeueReusableCell(withIdentifier: "\(ChannelCell.self)", for: indexPath) as? ChannelCell else {
                 return UITableViewCell()
             }
+            */
             
             //Configurar celda:
             //A como va iterando, es una sola, entonces la pasa por parametro.
@@ -105,9 +123,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return channelCell
             
         }else if let playlistItems = item as? [PlaylistItemModel.Item] {
-            guard let playlistItemsCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
-                return UITableViewCell()
-            }
+            let playlistItemsCell = tableView.dequeueReusableCell(for: VideoCell.self, for: indexPath)
+//            guard let playlistItemsCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
+//                return UITableViewCell()
+//            }
             
             playlistItemsCell.configCell(model: playlistItems[indexPath.row])
             
@@ -119,9 +138,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return playlistItemsCell
             
         }else if let video = item as? [VideoModel.Item] {
-            guard let videoCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
-                return UITableViewCell()
-            }
+            let videoCell = tableView.dequeueReusableCell(for: VideoCell.self, for: indexPath)
+//            guard let videoCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
+//                return UITableViewCell()
+//            }
             
             videoCell.configCell(model: video[indexPath.row])
             
@@ -133,9 +153,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return videoCell
             
         }else if let playlist = item as? [PlaylistModel.Item] {
-            guard let playlistCell = tableView.dequeueReusableCell(withIdentifier: "\(PlaylistCell.self)", for: indexPath) as? PlaylistCell else {
-                return UITableViewCell()
-            }
+            let playlistCell = tableView.dequeueReusableCell(for: PlaylistCell.self, for: indexPath)
+//            guard let playlistCell = tableView.dequeueReusableCell(withIdentifier: "\(PlaylistCell.self)", for: indexPath) as? PlaylistCell else {
+//                return UITableViewCell()
+//            }
             
             playlistCell.configCell(model: playlist[indexPath.row])
             
