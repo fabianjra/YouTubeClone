@@ -63,7 +63,7 @@ class HomeViewController: UIViewController {
         //Quita el espacio extra entre el Navigationbar y su paerte inferior.
         //Se resta 15 para quitar el espacio entre el Navigationbar y el top del TableView.
         //Se resta -80: Porque al final de las celdas, ellas llevan un espacio de padding, entonces cuando llegue a la ultima, se le quita ese espacio en blanco.
-        tableViewHome.contentInset = UIEdgeInsets(top: -15, left: 0, bottom: -80, right: 0)
+        tableViewHome.contentInset = UIEdgeInsets(top: -18, left: 0, bottom: -80, right: 0)
     }
     
     //Logica para saber cuando debe ocultar o mostrar el Navigationbar (detecta el swipe en base al ScrollView

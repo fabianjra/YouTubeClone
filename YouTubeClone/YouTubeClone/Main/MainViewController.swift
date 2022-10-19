@@ -10,13 +10,21 @@ import UIKit
 //hereda del View base (un tipo de Master Page.
 class MainViewController: BaseViewController {
     
+    //IBOutlet:
+    @IBOutlet weak var tabsView: TabsView!
+    
     var rootPageViewController : RootPageViewController!
+    private var options: [String] = ["HOME", "VIDEOS", "PLAYLIST", "CHANNEL", "ABOUT"]
+    var currentPageIndex: Int = 0 //Maneja cual pagina se selecciona en el NavBar
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Se invoca al navigationBar de la clase base.
         configNavigationbar()
+        
+        //Se inicia el tabview con las opciones cargadas.
+        tabsView.buildView(delegate: self, options: options)
     }
     
     
@@ -45,4 +53,25 @@ extension MainViewController: RootPageProtocol{
     }
     
     
+}
+
+extension MainViewController: TabsViewProtocol {
+    
+    func didSelectOption(index: Int) {
+         print("Se selecciono: ", options[index])
+        
+        //Mover a la pantalla correcta.
+        //Por defecto la animacion va a ser hacia adelante la direccion (forward).
+        var direction: UIPageViewController.NavigationDirection = .forward
+        
+        //Si se selecciona una pagina anterior a la actual, la animacion va a ser en direccion reversa.
+        if index < currentPageIndex {
+            direction = .reverse
+        }
+        
+        //Esta funcion es la que indica realmente a qué index debe dirigirse la pagina, y la direccion es solamente para animacion.
+        rootPageViewController.setViewControllerFromIndex(index: index, direction: direction)
+        
+        currentPageIndex = index
+    }
 }

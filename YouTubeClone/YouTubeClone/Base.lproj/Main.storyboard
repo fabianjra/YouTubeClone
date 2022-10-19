@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,19 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="CyJ-7T-Ds5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="895"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f94-kf-UmU" customClass="TabsView" customModule="YouTubeClone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="414" height="45"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2U3-uF-Gxv"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyJ-7T-Ds5">
+                                <rect key="frame" x="0.0" y="137" width="414" height="725"/>
                                 <connections>
                                     <segue destination="zCF-ik-u0k" kind="embed" id="r0L-Ct-AaO"/>
                                 </connections>
                             </containerView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="vCe-ND-oaI"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CyJ-7T-Ds5" firstAttribute="leading" secondItem="vCe-ND-oaI" secondAttribute="leading" id="07k-wQ-1t7"/>
+                            <constraint firstItem="CyJ-7T-Ds5" firstAttribute="trailing" secondItem="vCe-ND-oaI" secondAttribute="trailing" id="M7J-WS-gd3"/>
+                            <constraint firstItem="vCe-ND-oaI" firstAttribute="trailing" secondItem="f94-kf-UmU" secondAttribute="trailing" id="PUu-9o-Q01"/>
+                            <constraint firstItem="vCe-ND-oaI" firstAttribute="bottom" secondItem="CyJ-7T-Ds5" secondAttribute="bottom" id="gFG-Cm-hfd"/>
+                            <constraint firstItem="f94-kf-UmU" firstAttribute="top" secondItem="vCe-ND-oaI" secondAttribute="top" id="gc3-cP-GhJ"/>
+                            <constraint firstItem="f94-kf-UmU" firstAttribute="leading" secondItem="vCe-ND-oaI" secondAttribute="leading" id="s7P-ve-9YE"/>
+                            <constraint firstItem="CyJ-7T-Ds5" firstAttribute="top" secondItem="f94-kf-UmU" secondAttribute="bottom" id="ss6-gd-3X6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ue3-qN-xM2"/>
+                    <connections>
+                        <outlet property="tabsView" destination="f94-kf-UmU" id="zrt-Pp-jzv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,8 +83,5 @@
         <namedColor name="backgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
