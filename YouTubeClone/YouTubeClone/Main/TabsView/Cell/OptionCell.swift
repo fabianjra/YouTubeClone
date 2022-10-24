@@ -12,6 +12,13 @@ class OptionCell: UICollectionViewCell {
     //IBOulets:
     @IBOutlet weak var lblTitle: UILabel!
     
+    //Asigna el color al underline, dependiendo de la variable isSelected.
+    override var isSelected: Bool {
+        didSet {
+            highlightTitle(isSelected ? .whiteColor : .grayColor)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +28,7 @@ class OptionCell: UICollectionViewCell {
         lblTitle.text = option
     }
 
+    func highlightTitle(_ color: UIColor) {
+        lblTitle.textColor = color
+    }
 }

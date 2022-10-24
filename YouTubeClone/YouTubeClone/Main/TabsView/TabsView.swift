@@ -16,6 +16,22 @@ protocol TabsViewProtocol: AnyObject {
 
 class TabsView: UIView {
     
+    //Manejar el tab blanco debajo del texto, que se va a mover conforme a cual pantalla se mueve.
+    var underline: UIView = {
+       let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .whiteColor
+        
+        return view
+    }()
+    
+    //Manejo de index de la pantalla seleccionada actualmente.
+    var selectedItem: IndexPath = IndexPath(item: Int.zero, section: Int.zero)
+    
+    //Variable que va a manejar el ancho y el leading (izquierda) del objeto (underline).
+    var leadingConstraint: NSLayoutConstraint?
+    var widthConstraint: NSLayoutConstraint?
+    
     //Estos 2 metodos de required: se deben agregar por haber agregado el CollectionView por codigo.
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -35,6 +51,11 @@ class TabsView: UIView {
         self.options = options
         
         collectionView.reloadData()
+        
+        //Se ejecuta luego de 0.1 segundos, para garantizar que se haya cargado la vista y asi configurar el underline.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.configUnderline()
+        }
     }
     
     //Se agrega la vista y Se agregan los constraing con valores de cero.
@@ -47,6 +68,36 @@ class TabsView: UIView {
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
+    }
+    
+    //Contstraints del Underline para el manejo de seleccion de pantalla actual.
+    private func configUnderline(){
+        addSubview(underline)
+        
+        NSLayoutConstraint.activate([
+            underline.heightAnchor.constraint(equalToConstant: 2.0), //Va a tener una altura de 2 puntos (o pixeles)
+            underline.bottomAnchor.constraint(equalTo: bottomAnchor) //va a estar en la parte inferior.
+        ])
+        
+        //Se setea la primera celda como seleccionada por defecto.
+        let currentCell = collectionView.cellForItem(at: selectedItem)!
+        
+        //Se configura el ancho del objeto underline, del mismo tamaño de la celda seleccionada,  en el collectionView (textos Tabs de las pantallas).
+        widthConstraint = underline.widthAnchor.constraint(equalToConstant: currentCell.frame.width)
+        widthConstraint?.isActive = true
+        
+        //Se configura el leading del Unicerline, igual al de la celda.
+        leadingConstraint = underline.leadingAnchor.constraint(equalTo: currentCell.leadingAnchor)
+        leadingConstraint?.isActive = true
+    }
+    
+    //Otiene la posicion X del objeto y su ancho.
+    func updateUnderline(xOrigin: CGFloat, width: CGFloat){
+        leadingConstraint?.constant = xOrigin
+        widthConstraint?.constant = width
+
+        //Actualiza el Layout en caso de necesitarlo.
+        layoutIfNeeded()
     }
     
     //Se crea un collectionView por codigo, para el TabView que va a tener todas las vistas en un scroll horizontal.
@@ -84,6 +135,13 @@ extension TabsView: UICollectionViewDelegate, UICollectionViewDataSource {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(OptionCell.self)", for: indexPath) as? OptionCell else {
             return UICollectionViewCell()
+        }
+        
+        //Valida que sea la primera iteracion que haga.
+        if indexPath.row == 0 {
+            cell.highlightTitle(.whiteColor)
+        }else{
+            cell.isSelected = (selectedItem.item == indexPath.row) //Actualiza el isSelected.
         }
         
         //Al indexPat, puede ser .item o .row (es lo mismo
