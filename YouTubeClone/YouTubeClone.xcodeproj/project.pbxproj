@@ -21,6 +21,8 @@
 		402953E328F13FF80053511B /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 402953E128F13FF80053511B /* VideoCell.xib */; };
 		402953E628F140060053511B /* PlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402953E428F140060053511B /* PlaylistCell.swift */; };
 		402953E728F140060053511B /* PlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 402953E528F140060053511B /* PlaylistCell.xib */; };
+		4086E00429064CF400E25AC1 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086E00229064CF400E25AC1 /* PlayVideoViewController.swift */; };
+		4086E00529064CF400E25AC1 /* PlayVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4086E00329064CF400E25AC1 /* PlayVideoViewController.xib */; };
 		40974C9728E4F22B00889636 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40974C9628E4F22B00889636 /* Utils.swift */; };
 		40F4485528FDEC7A00304ADF /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4485328FDEC7A00304ADF /* BottomSheetViewController.swift */; };
 		40F4485628FDEC7A00304ADF /* BottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F4485428FDEC7A00304ADF /* BottomSheetViewController.xib */; };
@@ -84,6 +86,8 @@
 		402953E128F13FF80053511B /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		402953E428F140060053511B /* PlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCell.swift; sourceTree = "<group>"; };
 		402953E528F140060053511B /* PlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCell.xib; sourceTree = "<group>"; };
+		4086E00229064CF400E25AC1 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
+		4086E00329064CF400E25AC1 /* PlayVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayVideoViewController.xib; sourceTree = "<group>"; };
 		40974C9628E4F22B00889636 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		40F4485328FDEC7A00304ADF /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		40F4485428FDEC7A00304ADF /* BottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetViewController.xib; sourceTree = "<group>"; };
@@ -171,6 +175,15 @@
 				4024D60628FBA62B001D91A5 /* SectionTitleView.swift */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		4086E00129064CD000E25AC1 /* PlayVideo */ = {
+			isa = PBXGroup;
+			children = (
+				4086E00229064CF400E25AC1 /* PlayVideoViewController.swift */,
+				4086E00329064CF400E25AC1 /* PlayVideoViewController.xib */,
+			);
+			path = PlayVideo;
 			sourceTree = "<group>";
 		};
 		40F4485228FDEC3B00304ADF /* BottomSheet */ = {
@@ -274,6 +287,7 @@
 		E9DCCB0C2849B6F500F462ED /* YouTubeClone */ = {
 			isa = PBXGroup;
 			children = (
+				4086E00129064CD000E25AC1 /* PlayVideo */,
 				E9DCCB4F285199CB00F462ED /* Utils */,
 				E9DCCB482851984400F462ED /* ServiceLayer */,
 				E9DCCB322851853E00F462ED /* About */,
@@ -495,6 +509,7 @@
 				402953D828F138980053511B /* VideoSingle.json in Resources */,
 				E9DCCB172849B6F700F462ED /* Assets.xcassets in Resources */,
 				40F4485628FDEC7A00304ADF /* BottomSheetViewController.xib in Resources */,
+				4086E00529064CF400E25AC1 /* PlayVideoViewController.xib in Resources */,
 				E9DCCB3A2851858100F462ED /* VideosViewController.xib in Resources */,
 				402953DF28F13FDB0053511B /* ChannelCell.xib in Resources */,
 				40F4486428FE407B00304ADF /* VideoList.json in Resources */,
@@ -582,6 +597,7 @@
 				40F4486228FE378D00304ADF /* VideosProviderMock.swift in Sources */,
 				40F4486628FF7D6A00304ADF /* UITableView+Extension.swift in Sources */,
 				E9DCCB592851B7C800F462ED /* HomePresenter.swift in Sources */,
+				4086E00429064CF400E25AC1 /* PlayVideoViewController.swift in Sources */,
 				40F4486F28FFD10B00304ADF /* TabsView.swift in Sources */,
 				40F4487328FFD52800304ADF /* OptionCell.swift in Sources */,
 				402953E628F140060053511B /* PlaylistCell.swift in Sources */,

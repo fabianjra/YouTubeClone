@@ -20,7 +20,7 @@ struct PlaylistItemModel: Codable {
     struct Item: Codable {
         let kind, etag, id: String
         let snippet: Snippet
-        let contentDetails: ContentDetails
+        let contentDetails: ContentDetails?
         
         // MARK: - Snippet
         struct Snippet: Codable {

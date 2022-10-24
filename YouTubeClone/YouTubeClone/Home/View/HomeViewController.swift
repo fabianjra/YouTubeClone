@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FloatingPanel
 
 class HomeViewController: UIViewController {
     
@@ -19,10 +20,12 @@ class HomeViewController: UIViewController {
     //Se crean en variables por separado, para manejar las propias de esta pantalla.
     private var objectList: [[Any]] = []
     private var sectionTitleList: [String] = []
+    private var fpc: FloatingPanelController? //Para el manejo de la ventana emergente.
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        configFloatingPanel()
         
         //Se utiliza await porque el metodo que se llama es Async.
         //Se utiliza Task porque el ViewDidLoad no puede ser Async.
@@ -201,6 +204,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         return sectionView
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = objectList[indexPath.section]
+        var videoId: String = ""
+        
+        //Valida el tipo de celda que se selecciono, para saber a que modelo convertirlo.
+        //Obtiene el ID del video seleccionado para mostrarlo en la pantalla emeergente.
+        if let playlistItem = item as? [PlaylistItemModel.Item] {
+            videoId = playlistItem[indexPath.row].contentDetails?.videoID ?? ""
+            
+        } else if let videos = item as? [VideoModel.Item] {
+            videoId = videos[indexPath.row].id ?? ""
+            
+        } else {
+            return
+        }
+        
+        presentViewPanel(videoId)
+    }
+    
     //Presentar la lista de opciones del boton Dots.
     private func configButtonSheet(){
         let vc = BottomSheetViewController()
@@ -216,4 +238,56 @@ extension HomeViewController: HomeViewProtocol{
         self.sectionTitleList = sectionTitleList
         tableViewHome.reloadData()
     }
+}
+
+//Extension para las funciones del FloatingPlanel (ventana emergente que aparece al seleccionar un video para reproducirlo.
+extension HomeViewController: FloatingPanelControllerDelegate {
+    
+    func presentViewPanel(_ videoId: String) {
+        
+        let contentVC = PlayVideoViewController()
+        contentVC.videoId = videoId
+        
+        fpc?.set(contentViewController: contentVC)
+        
+        //safe unwrap por ser opcional.
+        if let fpc = fpc {
+            present(fpc, animated: true)
+        }
+    }
+    
+    func configFloatingPanel() {
+        
+        //Cuando se agrega un delegate, hay que conformar el protocolo.
+        fpc = FloatingPanelController(delegate: self)
+        fpc?.isRemovalInteractionEnabled = true //Permite quitar la vista cuando se hace swipe hacia abajo.
+        fpc?.surfaceView.grabberHandle.isHidden = true //Quita el icono superior en el modal.
+        fpc?.layout = MyFloatingPanelLayout() //Configura el Layout en base a una clase tomada de la documentacion del Pod en Github
+        fpc?.surfaceView.contentPadding = .init(top: -48, left: 0, bottom: -48, right: 0) //Cubre toda la pantalla sin dejar los espacios del SafeArea.
+    }
+    
+    //Permite agregar logica para cuando se cierre la ventana modal.
+    func floatingPanelDidRemove(_ fpc: FloatingPanelController) {
+        //TODO:
+    }
+    
+    func floatingPanelWillEndDragging(_ vc: FloatingPanelController, withVelocity velocity: CGPoint, targetState: UnsafeMutablePointer<FloatingPanelState>) {
+        
+        //Permite manejar la vista de todo el video para poder reporducirlo o el diseño de la parte inferior para solametne reproducirlo de manera minimizada.
+        if targetState.pointee != .full {
+            //TODO:
+        }else{
+            //TODO:
+        }
+    }
+}
+
+private class MyFloatingPanelLayout: FloatingPanelLayout {
+    let position: FloatingPanelPosition = .bottom
+    let initialState: FloatingPanelState = .full //Estado inicial cuando aparece el modal.
+    let anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] = [
+        .full: FloatingPanelLayoutAnchor(absoluteInset: CGFloat.zero, edge: .top, referenceGuide: .safeArea),
+        //half: FloatingPanelLayoutAnchor(fractionalInset: 0.5, edge: .bottom, referenceGuide: .safeArea), //Se quita porque a la mitad de la pantalla, no se necesita una posicion, solamente full o el minimizado.
+        .tip: FloatingPanelLayoutAnchor(absoluteInset: 60.0, edge: .bottom, referenceGuide: .safeArea)
+    ]
 }
