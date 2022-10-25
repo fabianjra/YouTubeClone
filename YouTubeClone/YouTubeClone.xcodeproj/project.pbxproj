@@ -180,10 +180,42 @@
 		4086E00129064CD000E25AC1 /* PlayVideo */ = {
 			isa = PBXGroup;
 			children = (
+				4086E00829077E3100E25AC1 /* Model */,
+				4086E00729077E1800E25AC1 /* Presenter */,
+				4086E00629077E0B00E25AC1 /* View */,
+			);
+			path = PlayVideo;
+			sourceTree = "<group>";
+		};
+		4086E00629077E0B00E25AC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				4086E00229064CF400E25AC1 /* PlayVideoViewController.swift */,
 				4086E00329064CF400E25AC1 /* PlayVideoViewController.xib */,
 			);
-			path = PlayVideo;
+			path = View;
+			sourceTree = "<group>";
+		};
+		4086E00729077E1800E25AC1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4086E00829077E3100E25AC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4086E00929077E3A00E25AC1 /* Provider */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4086E00929077E3A00E25AC1 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		40F4485228FDEC3B00304ADF /* BottomSheet */ = {
