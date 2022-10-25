@@ -26,7 +26,7 @@ class VideosProvider: VideosProviderProtocol {
             
             return model
         } catch {
-            CatchException(err: error)
+            EscribirCatchException(err: error)
             throw error
         }
     }

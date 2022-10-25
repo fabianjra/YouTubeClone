@@ -12,7 +12,7 @@ import Foundation
 /// - Parameters:
 ///   - message: Mensaje opcional a parte del errro del catch.
 ///   - err: Error que retorna el Catch del Try.
-func CatchException(_ message: String? = nil, err: Error) {
+func EscribirCatchException(_ message: String? = nil, err: Error) {
     print("Error en un catch: \(message ?? "")", err)
 }
 
@@ -41,7 +41,7 @@ class Utils {
                 let responseModel = try jsonDecoder.decode(T.self, from: data)
                 return responseModel
             }catch{
-                CatchException("json mock: ", err: error)
+                EscribirCatchException("json mock: ", err: error)
                 return nil
             }
         }catch{

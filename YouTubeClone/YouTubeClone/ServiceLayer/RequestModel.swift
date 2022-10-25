@@ -28,6 +28,7 @@ struct RequestModel{
         case channels = "/channels"
         case playlists = "/playlists"
         case playlistItems = "/playlistItems"
+        case videos = "/videos"
         case empty = ""
     }
     

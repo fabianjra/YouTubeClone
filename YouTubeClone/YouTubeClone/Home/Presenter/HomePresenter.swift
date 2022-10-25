@@ -95,7 +95,7 @@ class HomePresenter{
             delegate?.getData(list: objectList, sectionTitleList: sectionTitleList)
             
         } catch {
-            CatchException(err: error)
+            EscribirCatchException(err: error)
         }
     }
     
@@ -106,7 +106,7 @@ class HomePresenter{
             let playlistItems = try await provider.getPlaylistItems(playlistId: playlistId)
             return playlistItems
         }catch{
-            CatchException(err: error)
+            EscribirCatchException(err: error)
             return nil
         }
     }

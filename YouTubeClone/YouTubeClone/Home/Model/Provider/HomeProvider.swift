@@ -34,7 +34,7 @@ class HomeProvider: HomeProviderProtocol{
             
             return model
         } catch {
-            CatchException(err: error)
+            EscribirCatchException(err: error)
             throw error
         }
     }//FIN: Metodo
@@ -49,7 +49,7 @@ class HomeProvider: HomeProviderProtocol{
             
             return model
         } catch {
-            CatchException(err: error)
+            EscribirCatchException(err: error)
             throw error
         }
     }//FIN: Metodo
@@ -64,7 +64,7 @@ class HomeProvider: HomeProviderProtocol{
             
             return model
         } catch {
-            CatchException(err: error)
+            EscribirCatchException(err: error)
             throw error
         }
     }//FIN: Metodo
@@ -79,7 +79,7 @@ class HomeProvider: HomeProviderProtocol{
             
             return model
         } catch {
-            CatchException(err: error)
+            EscribirCatchException(err: error)
             throw error
         }
     }//FIN: Metodo
