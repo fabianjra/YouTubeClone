@@ -172,6 +172,10 @@ xcuserdata/
 #
 #
 
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
 ####
 # Xcode 4 - Deprecated classes
 #
