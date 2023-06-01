@@ -21,6 +21,7 @@ class HomeViewController: BaseViewController {
     private var objectList: [[Any]] = []
     private var sectionTitleList: [String] = []
     private var fpc: FloatingPanelController? //Para el manejo de la ventana emergente.
+    private var floatingPanelIsPresented: Bool = false //Permite validar si ya existe un FloatingPanel mostrandose.
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -216,11 +217,29 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         } else if let videos = item as? [VideoModel.Item] {
             videoId = videos[indexPath.row].id ?? ""
             
-        } else {
-            return
         }
         
-        presentViewPanel(videoId)
+        //Valida si ya existe un FloatingPanel mostrandose o si esta minimizado
+        if floatingPanelIsPresented {
+            
+            fpc?.willMove(toParent: nil)
+            fpc?.hide(animated: true, completion: { [weak self] in
+                
+                //Remove the floating panel view from your controller's view.
+                self?.fpc?.view.removeFromSuperview()
+                
+                //Remove the floating panel controller from the controller's hierarchy.
+                self?.fpc?.removeFromParent()
+                
+                //Vuelve a abrir nuevamente el Panel.
+                self?.dismiss(animated: true, completion: {
+                    self?.presentViewPanel(videoId)
+                })
+            })
+            
+        } else {
+            presentViewPanel(videoId)
+        }
     }
     
     //Presentar la lista de opciones del boton Dots.
@@ -248,10 +267,30 @@ extension HomeViewController: FloatingPanelControllerDelegate {
         let contentVC = PlayVideoViewController()
         contentVC.videoId = videoId
         
+        //Logica para ocultar el FloatingPanel
+        contentVC.goingToBeCollapsed = { [weak self] goingToBeCollapsed in
+            
+            guard let self = self else { return }
+            
+            //Accion que se va a realizar cuando se ejecute el boton de arriba de la pantalla del FloatingPanel, el de bajar la pantalla.
+            if goingToBeCollapsed {
+                
+                //Tip es la parte de abajo de la pantalla (floatingPanel minimizado).
+                self.fpc?.move(to: .tip, animated: true)
+            } else {
+                //Entra a esta logica cuando se toque cualquier parte de la pantalla que no sea el boton de collapse.
+                self.fpc?.move(to: .full, animated: true)
+            }
+        }
+        
         fpc?.set(contentViewController: contentVC)
+        
+        //Se agrega la logica para poder ocultar el FloatingPanel desde el scrollview que contiene adentro.
+        fpc?.track(scrollView: contentVC.tableViewVideos)
         
         //safe unwrap por ser opcional.
         if let fpc = fpc {
+            floatingPanelIsPresented = true
             present(fpc, animated: true)
         }
     }

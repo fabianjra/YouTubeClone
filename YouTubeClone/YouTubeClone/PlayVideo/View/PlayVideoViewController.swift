@@ -19,6 +19,20 @@ class PlayVideoViewController: BaseViewController {
     lazy var presenter = PlayVideoPresenter(delegate: self)
     
     var videoId: String = ""
+    
+    var goingToBeCollapsed: ((Bool) -> Void)?
+    
+    //Boton para bajar el FloatingPanel a la parte inferior de la pantalla.
+    //Al usar Self en la declaracion de una variable, hay que usar "lazy" obligatoriamente.
+    lazy var collapseVideoButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitle("", for: .normal)
+        button.setImage(UIImage.chevronDown, for: .normal)
+        button.tintColor = .whiteColor
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(collapsedVideoButtonPressed(_:)), for: .touchUpInside)
+        return button
+    }()
 
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -26,6 +40,7 @@ class PlayVideoViewController: BaseViewController {
         configTableView()
         configPlayerView()
         loadDataFromApi()
+        configCloseButton()
     }
     
     private func loadDataFromApi(){
@@ -64,6 +79,24 @@ class PlayVideoViewController: BaseViewController {
         
         tableViewVideos.rowHeight = UITableView.automaticDimension
         tableViewVideos.estimatedRowHeight = 69
+    }
+    
+    //Constraints para el boton de minimizar el FloatingPanel, encima de la pantalla de video.
+    private func configCloseButton() {
+        playerView.addSubview(collapseVideoButton)
+        NSLayoutConstraint.activate([
+            collapseVideoButton.topAnchor.constraint(equalTo: playerView.topAnchor, constant: 5),
+            collapseVideoButton.leadingAnchor.constraint(equalTo: playerView.leadingAnchor, constant: 5),
+            collapseVideoButton.widthAnchor.constraint(equalToConstant: 25),
+            collapseVideoButton.heightAnchor.constraint(equalToConstant: 25)
+        ])
+    }
+    
+    @objc private func collapsedVideoButtonPressed(_ sender: UIButton) {
+        guard let goingToBeCollapsed = self.goingToBeCollapsed else { return }
+        
+        //Si el FloatingPanel se va a ocultar, se pasa la variable true.
+        goingToBeCollapsed(true)
     }
 }
 
