@@ -314,11 +314,24 @@ extension HomeViewController: FloatingPanelControllerDelegate {
         
         //Permite manejar la vista de todo el video para poder reporducirlo o el diseño de la parte inferior para solametne reproducirlo de manera minimizada.
         if targetState.pointee != .full {
-            //TODO:
-        }else{
-            //TODO:
+            
+            //Se configura la notificacion, a traves de post: Se envia un diccionario para que la pantalla de "PlayVideoController" sepa si debe poner el reporductor full o en tip (minimizado).
+            NotificationCenter.default.post(name: .viewPosition, object: ["position": "bottom"])
+            
+            fpc?.surfaceView.contentPadding = .init(top: 0, left: 0, bottom: 0, right: 0)
+        } else {
+            NotificationCenter.default.post(name: .viewPosition, object: ["position": "top"])
+            
+            //Modifica los inset, para que cuando este minimizado, se corte la parte inferior y no se vea toda la inforamcion.
+            fpc?.surfaceView.contentPadding = .init(top: -48, left: 0, bottom: -48, right: 0)
         }
     }
+}
+
+//Se va a utilizar este notification para decirle a la pantalla de "PlayVideoController" y al TipView, como se deben comportar.
+extension NSNotification.Name {
+    static let viewPosition = Notification.Name("viewPosition")
+    static let expand = Notification.Name("expand")
 }
 
 private class MyFloatingPanelLayout: FloatingPanelLayout {

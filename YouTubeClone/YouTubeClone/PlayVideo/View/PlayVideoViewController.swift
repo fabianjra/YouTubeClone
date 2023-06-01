@@ -11,9 +11,21 @@ import youtube_ios_player_helper
 //Para poder utilizar el showError, este viewController debe heredar el BaseViewController (que es donde esta el Alert de showError).
 class PlayVideoViewController: BaseViewController {
     
-    //IBOulets
+    // MARK: IBOutlets generales:
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var tableViewVideos: UITableView!
+    
+    // MARK: IBOutlets del TipView:
+    @IBOutlet weak var tipView: UIView!
+    @IBOutlet weak var xmarkCloseVideo: UIButton!
+    @IBOutlet weak var playVideoButton: UIButton!
+    @IBOutlet weak var titleVideoLabel: UILabel!
+    @IBOutlet weak var channelTitleLabel: UILabel!
+    
+    // MARK: IBOutlets de contraints del PlayerView:
+    @IBOutlet weak var playerViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var playerViewHeightConstraint: NSLayoutConstraint!
+    
     
     //Es lazy porque usa self. Al usar el delegate, debe conformar el protocolo, por lo que al final se agrega el extension.
     lazy var presenter = PlayVideoPresenter(delegate: self)
@@ -41,6 +53,23 @@ class PlayVideoViewController: BaseViewController {
         configPlayerView()
         loadDataFromApi()
         configCloseButton()
+        generalConfig()
+        
+        //Se oculta el TipView por defecto, ya que no debe aparecer cuando esta a pantalla completa.
+        tipView.isHidden = true
+    }
+    
+    //Registra la notificacion de la posicion de la pantalla y el tipView.
+    private func generalConfig() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(floatingPannelChanged(notification:)),
+                                               name: .viewPosition,
+                                               object: nil)
+    }
+    
+    //La notificacion se debe remover cuando se vaya a cerrar la pantalla
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: .viewPosition, object: nil)
     }
     
     private func loadDataFromApi(){
@@ -97,6 +126,49 @@ class PlayVideoViewController: BaseViewController {
         
         //Si el FloatingPanel se va a ocultar, se pasa la variable true.
         goingToBeCollapsed(true)
+    }
+    
+    @objc private func floatingPannelChanged(notification: Notification) {
+        
+        guard let value = notification.object as? [String: String] else { return }
+        
+        if value["position"] == "top" {
+            tipView.isHidden = true
+            collapseVideoButton.isHidden = false
+            
+            playerViewHeightConstraint.constant = 225.0 //Tamaño del player cuando este en full screen. Original size.
+            playerViewTrailingConstraint.constant = 0.0
+            
+            view.layoutIfNeeded()
+            
+            tableViewVideos.isHidden = false
+        } else {
+            //bottom:
+            tipView.isHidden = false // Se muestra el TipView
+            collapseVideoButton.isHidden = true
+            
+            playerViewHeightConstraint.constant = playerViewHeightConstraint.constant * 0.3 //Se hace mas pequeño. 30% del tamaño original.
+            playerViewTrailingConstraint.constant = UIScreen.main.bounds.width * 0.7 //Se toma solamente el 70% de la pantalla y se lo asigna al tamaño del reproductor.
+            
+            view.layoutIfNeeded()
+            
+            // Se oculta el contenido del tableView para que no se vea en minimizado
+            tableViewVideos.isHidden = true
+        }
+    }
+    
+    // MARK: Botones TipView
+    
+    @IBAction func closeButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func playButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func tipViewButtonPressed(_ sender: UIButton) {
+        
     }
 }
 
