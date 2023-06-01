@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3842B82A281E62007DA2B9 /* ButtonIconList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3842B72A281E62007DA2B9 /* ButtonIconList.swift */; };
+		1F3842BA2A2827E1007DA2B9 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3842B92A2827E1007DA2B9 /* UILabel+Extension.swift */; };
 		4024D60728FBA62B001D91A5 /* SectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024D60628FBA62B001D91A5 /* SectionTitleView.swift */; };
 		402953CD28F0B3670053511B /* HomeProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402953CC28F0B3670053511B /* HomeProviderMock.swift */; };
 		402953D028F136480053511B /* Channel.json in Resources */ = {isa = PBXBuildFile; fileRef = 402953CF28F136480053511B /* Channel.json */; };
@@ -79,6 +81,8 @@
 
 /* Begin PBXFileReference section */
 		0CD3364CC58D3FF5757A124F /* Pods-YouTubeClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeClone.debug.xcconfig"; path = "Target Support Files/Pods-YouTubeClone/Pods-YouTubeClone.debug.xcconfig"; sourceTree = "<group>"; };
+		1F3842B72A281E62007DA2B9 /* ButtonIconList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIconList.swift; sourceTree = "<group>"; };
+		1F3842B92A2827E1007DA2B9 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		4024D60628FBA62B001D91A5 /* SectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleView.swift; sourceTree = "<group>"; };
 		402953CC28F0B3670053511B /* HomeProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProviderMock.swift; sourceTree = "<group>"; };
 		402953CF28F136480053511B /* Channel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Channel.json; sourceTree = "<group>"; };
@@ -164,6 +168,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F3842B62A281E48007DA2B9 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1F3842B72A281E62007DA2B9 /* ButtonIconList.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		402953CE28F0B3B10053511B /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +216,7 @@
 		4086E00629077E0B00E25AC1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1F3842B62A281E48007DA2B9 /* CustomViews */,
 				40FC37CB2907968E0074456D /* Cells */,
 				4086E00229064CF400E25AC1 /* PlayVideoViewController.swift */,
 				4086E00329064CF400E25AC1 /* PlayVideoViewController.xib */,
@@ -252,6 +265,7 @@
 				40F4486528FF7D6A00304ADF /* UITableView+Extension.swift */,
 				40F4486728FFB14800304ADF /* UIColor+Extension.swift */,
 				40F4486928FFB46000304ADF /* UIImage+Extension.swift */,
+				1F3842B92A2827E1007DA2B9 /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -659,6 +673,7 @@
 				E9DCCB2A2851835200F462ED /* RootPageViewController.swift in Sources */,
 				E9DCCB572851B02400F462ED /* HomeProvider.swift in Sources */,
 				40F4486228FE378D00304ADF /* VideosProviderMock.swift in Sources */,
+				1F3842BA2A2827E1007DA2B9 /* UILabel+Extension.swift in Sources */,
 				40F4486628FF7D6A00304ADF /* UITableView+Extension.swift in Sources */,
 				E9DCCB592851B7C800F462ED /* HomePresenter.swift in Sources */,
 				40FC37D2290796D10074456D /* VideoHeaderCell.swift in Sources */,
@@ -668,6 +683,7 @@
 				40FC37CA29078F3B0074456D /* PlayVideoPresenter.swift in Sources */,
 				40F4487328FFD52800304ADF /* OptionCell.swift in Sources */,
 				402953E628F140060053511B /* PlaylistCell.swift in Sources */,
+				1F3842B82A281E62007DA2B9 /* ButtonIconList.swift in Sources */,
 				402953DE28F13FDB0053511B /* ChannelCell.swift in Sources */,
 				E9DCCB5B2854189300F462ED /* SearchModel.swift in Sources */,
 				E9DCCB2728517D0900F462ED /* VideoModel.swift in Sources */,
