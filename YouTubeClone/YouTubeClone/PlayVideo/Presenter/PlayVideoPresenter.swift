@@ -33,6 +33,22 @@ protocol PlayVideoViewProtocol: AnyObject, BaseViewProtocol{
     
     func getVideos(_ videoId: String) async{
         do{
+            
+            /*
+             The defer statement allow you to define an action that will be executed after the rest of the operation you want to be done,
+             i.e. at the end of the scope.
+             
+             defer in Swift 2.0 is like a finally, that means swift ensures you to execute that defer code at the end of current function scope.
+             Here are the some points that i need to know:
+             1) No matter even guard will returns
+             2) we can write multiple defer scopes
+             */
+            defer {
+                delegate?.loadingView(.hide)
+            }
+            
+            delegate?.loadingView(.show)
+            
             let response = try await provider.getVideo(videoId)
             relatedVideoList.append(response.items)
             
@@ -58,6 +74,22 @@ protocol PlayVideoViewProtocol: AnyObject, BaseViewProtocol{
         async let channel = try await provider.getChannel(channelId) //Llamado al channel por API.
         
         do{
+            
+            /*
+             The defer statement allow you to define an action that will be executed after the rest of the operation you want to be done,
+             i.e. at the end of the scope.
+             
+             defer in Swift 2.0 is like a finally, that means swift ensures you to execute that defer code at the end of current function scope.
+             Here are the some points that i need to know:
+             1) No matter even guard will returns
+             2) we can write multiple defer scopes
+             */
+            defer {
+                delegate?.loadingView(.hide)
+            }
+            
+            delegate?.loadingView(.show)
+            
             let (responseRelatedVideos, responseChannel) = await (try relatedVideos, try channel) //Una unica consulta fusionada.
             
             //Se filtran los videos, para no dejar los videos que no tengan informacion.

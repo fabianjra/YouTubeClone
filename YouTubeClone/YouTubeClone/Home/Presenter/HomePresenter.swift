@@ -51,6 +51,21 @@ class HomePresenter{
         objectList.removeAll()
         sectionTitleList.removeAll()
         
+        /*
+         The defer statement allow you to define an action that will be executed after the rest of the operation you want to be done,
+         i.e. at the end of the scope.
+         
+         defer in Swift 2.0 is like a finally, that means swift ensures you to execute that defer code at the end of current function scope.
+         Here are the some points that i need to know:
+         1) No matter even guard will returns
+         2) we can write multiple defer scopes
+         */
+        defer {
+            delegate?.loadingView(.hide)
+        }
+        
+        delegate?.loadingView(.show)
+        
         async let channel = try await provider.getChannel(channelId: Constants.channelID).items
         async let playlists = try await provider.getPlaylists(channelId: Constants.channelID).items
         async let videos = try await provider.getVideos(searchString: "", channelId: Constants.channelID).items

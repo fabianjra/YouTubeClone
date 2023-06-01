@@ -7,14 +7,22 @@
 
 import UIKit
 
+enum LoadingViewState {
+    case show
+    case hide
+}
+
 //Quien conforme este protocolo, tiene que usar el metodo de showError.
 protocol BaseViewProtocol {
     func showError(_ error: String, callback: (() -> Void)?)
+    func loadingView(_ state: LoadingViewState)
 }
 
 //Se crea esta clase como un tipo de Master Page para utilizarla como base y mostrar siempre el NavigationBar superior.
 class BaseViewController: UIViewController {
 
+    var loadingIndicator = UIActivityIndicatorView(style: .large)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -98,5 +106,25 @@ extension BaseViewController {
         }))
         
         present(alert, animated: true)
+    }
+    
+    func loadingView(_ state: LoadingViewState) {
+        switch state {
+        case .show:
+            showLoading()
+        case .hide:
+            hideLoading()
+        }
+    }
+    
+    private func showLoading(){
+        view.addSubview(loadingIndicator)
+        loadingIndicator.center = view.center
+        loadingIndicator.startAnimating()
+    }
+    
+    private func hideLoading(){
+        loadingIndicator.stopAnimating()
+        loadingIndicator.removeFromSuperview()
     }
 }
