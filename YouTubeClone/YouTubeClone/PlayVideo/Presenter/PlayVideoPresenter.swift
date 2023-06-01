@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PlayVideoViewProtocol: AnyObject{
+protocol PlayVideoViewProtocol: AnyObject, BaseViewProtocol{
     func getRelatedVideosFinished()
 }
 
@@ -42,7 +42,14 @@ protocol PlayVideoViewProtocol: AnyObject{
             delegate?.getRelatedVideosFinished()
             
         }catch{
-            EscribirCatchException("getVideos: ", err: error)
+            Log.WriteCatchExeption(error: error)
+            delegate?.showError(error.localizedDescription, callback: {
+               
+                //Se agrega el callback del boton "retry".
+                Task { [weak self] in
+                    await self?.getVideos(videoId)
+                }
+            })
         }
     }
     
@@ -60,7 +67,8 @@ protocol PlayVideoViewProtocol: AnyObject{
             channelModel = responseChannel.items.first
             
         }catch{
-            EscribirCatchException("getChannelAndRelatedVideos: ", err: error)
+            Log.WriteCatchExeption(error: error)
+            delegate?.showError(error.localizedDescription, callback: nil)
         }
         
     }

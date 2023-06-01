@@ -7,10 +7,18 @@
 
 import Foundation
 
-protocol HomeViewProtocol: AnyObject {
+//El protocolo implementa otro protocolo. En este caso para usar la funcion "getData" y "showError" del protocolo: "BaseViewProtocol"
+protocol HomeViewProtocol: AnyObject, BaseViewProtocol {
+    //getData le devuelve informacion a la vista:
     func getData(list: [[Any]], sectionTitleList: [String]) //Se hace un array, de un array de Anys, porque vienen diferentes tipos de datos.
 }
 
+/*
+ A MainActor is a globally unique actor who performs his tasks on the main thread. It should be used for properties, methods, instances,
+ and closures to perform tasks on the main thread. Proposal SE-0316 Global Actors introduced the main actor as its an example of a global
+ actor, and it inherits the GlobalActor protocol.
+ */
+@MainActor
 class HomePresenter{
     
     var provider: HomeProviderProtocol
@@ -37,13 +45,6 @@ class HomePresenter{
     }
     
     //Se llama HomeObjects porque se estan obteniendo todos los objetos del inicio.
-    
-    /*
-     A MainActor is a globally unique actor who performs his tasks on the main thread. It should be used for properties, methods, instances,
-     and closures to perform tasks on the main thread. Proposal SE-0316 Global Actors introduced the main actor as its an example of a global
-     actor, and it inherits the GlobalActor protocol.
-     */
-    @MainActor
     func getHomeObjects() async{
         
         //Se elimina el objeto, antes de llamar al servicio para que todo quede vacio.
@@ -95,7 +96,14 @@ class HomePresenter{
             delegate?.getData(list: objectList, sectionTitleList: sectionTitleList)
             
         } catch {
-            EscribirCatchException(err: error)
+            Log.WriteCatchExeption(error: error)
+            delegate?.showError(error.localizedDescription, callback: {
+               
+                //Se agrega el callback del boton "retry".
+                Task { [weak self] in
+                    await self?.getHomeObjects()
+                }
+            })
         }
     }
     
@@ -106,7 +114,15 @@ class HomePresenter{
             let playlistItems = try await provider.getPlaylistItems(playlistId: playlistId)
             return playlistItems
         }catch{
-            EscribirCatchException(err: error)
+            Log.WriteCatchExeption(error: error)
+            delegate?.showError(error.localizedDescription, callback: {
+               
+                //Se agrega el callback del boton "retry".
+                Task { [weak self] in
+                    await self?.getHomeObjects()
+                }
+            })
+            
             return nil
         }
     }

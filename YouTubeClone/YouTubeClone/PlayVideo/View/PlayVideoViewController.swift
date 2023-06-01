@@ -8,7 +8,8 @@
 import UIKit
 import youtube_ios_player_helper
 
-class PlayVideoViewController: UIViewController {
+//Para poder utilizar el showError, este viewController debe heredar el BaseViewController (que es donde esta el Alert de showError).
+class PlayVideoViewController: BaseViewController {
     
     //IBOulets
     @IBOutlet weak var playerView: YTPlayerView!

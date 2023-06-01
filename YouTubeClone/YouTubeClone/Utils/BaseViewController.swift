@@ -7,12 +7,16 @@
 
 import UIKit
 
+//Quien conforme este protocolo, tiene que usar el metodo de showError.
+protocol BaseViewProtocol {
+    func showError(_ error: String, callback: (() -> Void)?)
+}
+
 //Se crea esta clase como un tipo de Master Page para utilizarla como base y mostrar siempre el NavigationBar superior.
 class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     func configNavigationbar(){
@@ -67,5 +71,32 @@ class BaseViewController: UIViewController {
     
     @objc func dotsButtonPressed(){
         print("dotsButtonPressed")
+    }
+}
+
+extension BaseViewController {
+    
+    //Se crea una funcion para mostrar un error globalmente en la aplicacion.
+    func showError(_ error: String, callback: (() -> Void)?) {
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        
+        //Agregar acciones (botones) a la alerta.
+        
+        if let callback = callback {
+            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { action in
+                if action.style == .default {
+                    callback()
+                    Log.WriteError(error)
+                }
+            }))
+        }
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { action in
+            if action.style == .cancel {
+                Log.WriteError(error)
+            }
+        }))
+        
+        present(alert, animated: true)
     }
 }
