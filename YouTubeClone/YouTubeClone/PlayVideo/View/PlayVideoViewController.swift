@@ -31,8 +31,17 @@ class PlayVideoViewController: BaseViewController {
     lazy var presenter = PlayVideoPresenter(delegate: self)
     
     var videoId: String = ""
-    
     var goingToBeCollapsed: ((Bool) -> Void)?
+    var isClosedVideo: (() -> Void)? //Valida la accion de cerrar el video con el boton cuando esta minimizado.
+    
+    //Valida si el video esta reproduciendo, para mostrar play o pausa en el reproductor minimizado.
+    var isPlayingVideo: Bool = false {
+        
+        //Cambia el icono de play y pausa en el boton "playVideoButton", dependiendo del estado de esta variable.
+        didSet {
+            playVideoButton.setImage(isPlayingVideo ? .pause : .playFill, for: .normal)
+        }
+    }
     
     //Boton para bajar el FloatingPanel a la parte inferior de la pantalla.
     //Al usar Self en la declaracion de una variable, hay que usar "lazy" obligatoriamente.
@@ -46,6 +55,24 @@ class PlayVideoViewController: BaseViewController {
         return button
     }()
 
+    //Vista para mostar la parte superior de la pantalla en negro:
+    var topInsetSafeArea: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .black
+        return view
+    }()
+    
+    //Se crea una barra de progreso para mostrarla en la parte inferior del reproductor minimizado:
+    var progressBar: UIProgressView = {
+        let progress = UIProgressView()
+        progress.translatesAutoresizingMaskIntoConstraints = false
+        progress.trackTintColor = .clear
+        progress.progressTintColor = .red
+        progress.progress = .zero
+        return progress
+    }()
+    
     override func viewDidLoad(){
         super.viewDidLoad()
 
@@ -54,9 +81,14 @@ class PlayVideoViewController: BaseViewController {
         loadDataFromApi()
         configCloseButton()
         generalConfig()
+        configTopInsetSafeAreaConstraint()
+        configProgressLayout()
         
         //Se oculta el TipView por defecto, ya que no debe aparecer cuando esta a pantalla completa.
         tipView.isHidden = true
+        
+        titleVideoLabel.text = ""
+        channelTitleLabel.text = ""
     }
     
     //Registra la notificacion de la posicion de la pantalla y el tipView.
@@ -65,6 +97,28 @@ class PlayVideoViewController: BaseViewController {
                                                selector: #selector(floatingPannelChanged(notification:)),
                                                name: .viewPosition,
                                                object: nil)
+    }
+    
+    //Constraints para la vista negra en la parte superior del reproductor.
+    private func configTopInsetSafeAreaConstraint() {
+        view.addSubview(topInsetSafeArea)
+        NSLayoutConstraint.activate([
+            topInsetSafeArea.widthAnchor.constraint(equalTo: view.widthAnchor),
+            topInsetSafeArea.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            topInsetSafeArea.topAnchor.constraint(equalTo: view.topAnchor),
+            topInsetSafeArea.bottomAnchor.constraint(equalTo: playerView.topAnchor)
+        ])
+    }
+    
+    //Constraints para el progressBar de la parte inferior del mini reproductor:
+    private func configProgressLayout() {
+        view.addSubview(progressBar)
+        NSLayoutConstraint.activate([
+            progressBar.widthAnchor.constraint(equalTo: tipView.widthAnchor),
+            progressBar.heightAnchor.constraint(equalToConstant: 2.0),
+            progressBar.centerXAnchor.constraint(equalTo: tipView.centerXAnchor),
+            progressBar.bottomAnchor.constraint(equalTo: tipView.bottomAnchor, constant: 12)
+        ])
     }
     
     //La notificacion se debe remover cuando se vaya a cerrar la pantalla
@@ -142,6 +196,7 @@ class PlayVideoViewController: BaseViewController {
             view.layoutIfNeeded()
             
             tableViewVideos.isHidden = false
+            progressBar.isHidden = true
         } else {
             //bottom:
             tipView.isHidden = false // Se muestra el TipView
@@ -154,6 +209,7 @@ class PlayVideoViewController: BaseViewController {
             
             // Se oculta el contenido del tableView para que no se vea en minimizado
             tableViewVideos.isHidden = true
+            progressBar.isHidden = false
         }
     }
     
@@ -161,14 +217,26 @@ class PlayVideoViewController: BaseViewController {
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {
         
+        if let isClosedVideo = isClosedVideo {
+            
+            //Se agrega el closure, para enviarle la señal al controller que lo llame.
+            //En este caso al HomeViewController.
+            isClosedVideo()
+        }
+        dismiss(animated: true)
     }
     
     @IBAction func playButtonPressed(_ sender: UIButton) {
-        
+        //Si el video ya se estaba reproduciendo, lo detiene. Caso contrario, lo reproduce.
+        isPlayingVideo ? playerView.stopVideo() : playerView.playVideo()
     }
     
     @IBAction func tipViewButtonPressed(_ sender: UIButton) {
-        
+        if let goingToBeCollapsed = goingToBeCollapsed {
+            
+            //En la pantalla de HomeViewControoller, se tiene validado para que cuando sea False, el FloatingPanel se convierta a .full (pantalla completa)
+            goingToBeCollapsed(false)
+        }
     }
 }
 
@@ -214,12 +282,53 @@ extension PlayVideoViewController: YTPlayerViewDelegate {
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         playerView.playVideo()
     }
+    
+    //Para validar si el video esta reproduciendo, para mostrar play o pausa en el reproductor minimizado.
+    func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
+        switch state {
+        case .unstarted:
+            //TODO: No action
+            break
+        case .ended:
+            isPlayingVideo = false
+        case .playing:
+            isPlayingVideo = true
+        case .paused:
+            isPlayingVideo = false
+        case .buffering:
+            //TODO: No action
+            break
+        case .cued:
+            isPlayingVideo = false
+        case .unknown:
+            //TODO: No action
+            break
+        @unknown default:
+            //TODO: No action
+            break
+        }
+    }
+    
+    func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
+        
+        //Lleva el contador de tiempo de la duracion del video.
+        playerView.duration { duration, error in
+            self.progressBar.progress = (playTime/Float(duration))
+        }
+    }
 }
 
 extension PlayVideoViewController: PlayVideoViewProtocol {
     
     func getRelatedVideosFinished(){
-        print("Respuesta de: getRelatedVideosFinished")
+        
+        //Se toma el valor que esta en el PlayVideoPresenter (datos del video), para asignarlo a los labels del reproductor minimizado:
+        if let video = presenter.relatedVideoList[0].first as? VideoModel.Item,
+           let title = video.snippet?.title {
+            
+            titleVideoLabel.text = title
+        }
+        channelTitleLabel.text = presenter.channelModel?.snippet.title
         
         tableViewVideos.reloadData()
     }

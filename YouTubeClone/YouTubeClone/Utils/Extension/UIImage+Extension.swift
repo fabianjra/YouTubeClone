@@ -50,4 +50,11 @@ extension UIImage{
         return (UIImage(named: "magnifying")?.withRenderingMode(.alwaysTemplate))!
     }
     
+    @nonobjc class var pause: UIImage {
+        return (UIImage(systemName: "pause"))!
+    }
+    
+    @nonobjc class var playFill: UIImage {
+        return (UIImage(systemName: "play.fill"))!
+    }
 }

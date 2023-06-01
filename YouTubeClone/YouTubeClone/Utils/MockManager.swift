@@ -10,5 +10,5 @@ import Foundation
 //Patron Singleton: Se crea una clase y uns intancia fija, para utilizarla como bandera para saber si debe usar el Mock o no.
 class MockManager {
     static var shared = MockManager()
-    var runWithMock: Bool = true
+    var runWithMock: Bool = false
 }

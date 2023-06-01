@@ -277,10 +277,24 @@ extension HomeViewController: FloatingPanelControllerDelegate {
                 
                 //Tip es la parte de abajo de la pantalla (floatingPanel minimizado).
                 self.fpc?.move(to: .tip, animated: true)
+                
+                //Se configura la notificacion, a traves de post: Se envia un diccionario para que la pantalla de "PlayVideoController" sepa si debe poner el reporductor full o en tip (minimizado).
+                NotificationCenter.default.post(name: .viewPosition, object: ["position": "bottom"])
+                self.fpc?.surfaceView.contentPadding = .init(top: 0, left: 0, bottom: 0, right: 0)
             } else {
                 //Entra a esta logica cuando se toque cualquier parte de la pantalla que no sea el boton de collapse.
                 self.fpc?.move(to: .full, animated: true)
+                
+                NotificationCenter.default.post(name: .viewPosition, object: ["position": "top"])
+                
+                //Modifica los inset, para que cuando este minimizado, se corte la parte inferior y no se vea toda la inforamcion.
+                self.fpc?.surfaceView.contentPadding = .init(top: -48, left: 0, bottom: -48, right: 0)
             }
+        }
+        
+        contentVC.isClosedVideo = { [weak self] in
+            //Accion de cerrar el floatingPanel cuando se presiona el boton "X" en el reproductor minimizado.
+            self?.floatingPanelIsPresented = false
         }
         
         fpc?.set(contentViewController: contentVC)
@@ -307,7 +321,9 @@ extension HomeViewController: FloatingPanelControllerDelegate {
     
     //Permite agregar logica para cuando se cierre la ventana modal.
     func floatingPanelDidRemove(_ fpc: FloatingPanelController) {
-        //TODO:
+        
+        //Cuando la pantalla se cierra, se le indica eso. Asi si se vuelva a abrir el floating panel, lo abra desde cero.
+        floatingPanelIsPresented = false
     }
     
     func floatingPanelWillEndDragging(_ vc: FloatingPanelController, withVelocity velocity: CGPoint, targetState: UnsafeMutablePointer<FloatingPanelState>) {
